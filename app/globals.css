@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-manrope);
+  --color-ink: #070c12;
+  --color-ink-soft: #0b131b;
+  --color-panel: #111b25;
+  --color-panel-light: #172530;
+  --color-ivory: #f1e7d7;
+  --color-parchment: #d9c8aa;
+  --color-muted: #9c988f;
+  --color-gold: #c2974a;
+  --color-gold-light: #dfc083;
+  --color-garnet: #641b22;
+  --color-wood: #241710;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #070c12;
+  color: #f1e7d7;
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
+
+body::before {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.17;
+  mix-blend-mode: soft-light;
+  background-image:
+    radial-gradient(circle at 17% 20%, rgba(255, 255, 255, 0.35) 0.5px, transparent 0.8px),
+    radial-gradient(circle at 66% 32%, rgba(255, 255, 255, 0.18) 0.5px, transparent 0.8px);
+  background-size: 4px 4px, 5px 5px;
+}
+
+::selection {
+  background: rgba(194, 151, 74, 0.38);
+  color: #f1e7d7;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.form-field {
+  width: 100%;
+  min-height: 3.45rem;
+  border: 1px solid rgba(217, 200, 170, 0.2);
+  border-radius: 0.25rem;
+  background: rgba(7, 12, 18, 0.55);
+  padding: 0.9rem 1rem;
+  color: #f1e7d7;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.form-field:focus {
+  border-color: #c2974a;
+  background: rgba(7, 12, 18, 0.8);
+}
+
+.literary-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.literary-rule::before,
+.literary-rule::after {
+  width: 2.2rem;
+  height: 1px;
+  content: "";
+  background: #c2974a;
+}
+
+.map-glow {
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.42);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
