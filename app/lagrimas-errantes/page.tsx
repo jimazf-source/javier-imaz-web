@@ -40,21 +40,21 @@ const vimeoVideos = [
     description:
       "Una puerta audiovisual al mito de Yharty, las lágrimas dispersas y los símbolos que abren la novela.",
     embedUrl:
-      "https://player.vimeo.com/video/1194359474?title=0&byline=0&portrait=0&badge=0&autopause=0",
+      "https://player.vimeo.com/video/1194359474?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
   },
   {
     title: "II. En busca de un mito",
     description:
       "El viaje, la expedición y la llamada de aquello que permanece oculto entre mapas, memoria y destino.",
     embedUrl:
-      "https://player.vimeo.com/video/1194537524?title=0&byline=0&portrait=0&badge=0&autopause=0",
+      "https://player.vimeo.com/video/1194537524?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
   },
   {
     title: "III. La búsqueda de lo imposible",
     description:
       "El tramo final del enigma: la frontera entre la aventura, el ritual y lo que el tiempo no quiere entregar.",
     embedUrl:
-      "https://player.vimeo.com/video/1194543577?title=0&byline=0&portrait=0&badge=0&autopause=0",
+      "https://player.vimeo.com/video/1194543577?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
   },
 ];
 
@@ -238,15 +238,18 @@ export default function LagrimasPage() {
       <section className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[360px_1fr]">
           <Reveal>
-            <div className="sticky top-28 border border-gold/20 bg-panel p-7">
-              <Image
-                src="/assets/portada-lagrimas-errantes.jpg"
-                alt="Portada de Lágrimas Errantes"
-                width={397}
-                height={592}
-                className="h-auto w-full object-contain shadow-2xl"
-              />
-              <dl className="mt-7 space-y-4 text-sm">
+            <div className="sticky top-28 overflow-hidden border border-gold/20 bg-panel">
+              <div className="bg-ink">
+                <Image
+                  src="/assets/portada-lagrimas-errantes.jpg"
+                  alt="Portada de Lágrimas Errantes"
+                  width={397}
+                  height={592}
+                  className="block h-auto w-full object-cover shadow-2xl"
+                  priority
+                />
+              </div>
+              <dl className="space-y-4 p-7 text-sm">
                 <div>
                   <dt className="text-muted">Editorial</dt>
                   <dd className="mt-1 text-parchment">{book.publisher}</dd>
@@ -345,26 +348,33 @@ export default function LagrimasPage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid gap-7 lg:grid-cols-3">
+          <div className="mt-14 space-y-8">
             {vimeoVideos.map((video, index) => (
               <Reveal key={video.embedUrl} delay={index * 90}>
-                <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20">
+                <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20 lg:grid lg:grid-cols-[minmax(0,1.45fr)_420px]">
                   <div className="relative aspect-video bg-ink">
                     <iframe
                       src={video.embedUrl}
                       title={video.title}
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      allow="fullscreen; picture-in-picture"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                       className="absolute inset-0 h-full w-full"
+                      loading="lazy"
                     />
                   </div>
-                  <div className="border-t border-gold/15 p-6">
-                    <h3 className="font-display text-3xl leading-tight text-ivory">
+                  <div className="border-t border-gold/15 p-7 lg:border-l lg:border-t-0 lg:p-8">
+                    <p className="literary-rule text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
+                      Corto audiovisual
+                    </p>
+                    <h3 className="mt-6 font-display text-4xl leading-tight text-ivory">
                       {video.title}
                     </h3>
-                    <p className="mt-4 text-sm leading-7 text-muted">
+                    <p className="mt-5 text-sm leading-7 text-muted">
                       {video.description}
+                    </p>
+                    <p className="mt-8 text-xs uppercase tracking-[.22em] text-gold-light/80">
+                      Reproducir en pantalla completa desde el propio vídeo
                     </p>
                   </div>
                 </article>
