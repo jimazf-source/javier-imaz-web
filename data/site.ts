@@ -49,8 +49,8 @@ export const books: Book[] = [
     published: "2026",
     isbn: "9791387715984",
     purchaseUrl:
-      "https://universodeletras.com/libro/lagrimas-errantes_179960/",
-    sampleUrl: "/downloads/muestra-lagrimas-errantes-capitulo-i.pdf",
+      "https://libros.cc/Lagrimas-Errantes.htm?isbn=9791387715984",
+    sampleUrl: "/downloads/lagrimas-errantes-muestra-paginas-1-31.pdf",
   },
   {
     slug: "el-enigma-de-la-caja-del-tiempo",

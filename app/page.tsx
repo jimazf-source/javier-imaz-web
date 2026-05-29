@@ -27,11 +27,14 @@ export default function HomePage() {
               Autor · Universo literario
             </p>
             <h1 className="font-display text-[clamp(4.4rem,10vw,8.5rem)] leading-[.87] tracking-[-.03em] text-ivory">
-              Javier
+              Lágrimas
               <span className="block pl-[clamp(2rem,8vw,6rem)] italic text-gold-light">
-                Imaz Fandos
+                Errantes
               </span>
             </h1>
+            <p className="mt-6 font-display text-[clamp(1.45rem,3vw,2.25rem)] italic text-parchment">
+              Javier Imaz Fandos
+            </p>
             <p className="mt-9 font-display text-[clamp(1.65rem,3vw,2.35rem)] italic leading-snug text-parchment">
               {siteConfig.tagline}
             </p>

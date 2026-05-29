@@ -28,9 +28,78 @@ const storyLines = [
     text: "Zacarías Neldson persigue las tres esferas de cuarzo en una ruta de ciencia, peligro y leyenda.",
   },
   {
-    place: "Zuera, 1942",
+    place: "Zufaria, 1942",
     title: "El lector inesperado",
     text: "Zami encuentra el extremo de un hilo tendido durante siglos y descubre el poder de leer los signos.",
+  },
+];
+
+const gallerySections = [
+  {
+    part: "Primera parte",
+    title: "Las Lágrimas de Yharty",
+    motto: "El origen.",
+    images: [
+      {
+        src: "/assets/lagrimas-gallery/parte-1-shricopia.jpg",
+        alt: "Diosa Shricopia nacida de pétalos dorados",
+        title: "De sus pétalos dorados nació la diosa Shricopia",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-thron-baculo.jpg",
+        alt: "Thron sosteniendo el báculo dorado",
+        title: "Thron y el Báculo",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-bo-gema.jpg",
+        alt: "Bo encuentra la gran gema en la mina",
+        title: "Bo encuentra la gran Gema",
+      },
+    ],
+  },
+  {
+    part: "Segunda parte",
+    title: "En busca de un mito",
+    motto: "La gran expedición.",
+    images: [
+      {
+        src: "/assets/lagrimas-gallery/parte-2-plano.jpg",
+        alt: "Plano antiguo de la expedición del Spirit of the Winds",
+        title: "Plano de la expedición",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-fosil-tortuga-alada.jpg",
+        alt: "Fósil de la tortuga alada en el Crystal Palace",
+        title: "El fósil de la tortuga alada",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-gran-expedicion.jpg",
+        alt: "Botadura del barco de la gran expedición",
+        title: "La gran expedición",
+      },
+    ],
+  },
+  {
+    part: "Tercera parte",
+    title: "La búsqueda de lo imposible",
+    motto: "El ritual.",
+    images: [
+      {
+        src: "/assets/lagrimas-gallery/parte-3-madagascar.jpg",
+        alt: "Mapa de Madagascar de la expedición del Spirit of the Winds",
+        title: "Madagascar",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-lago-itasi.jpg",
+        alt: "Globo sobrevolando el lago Itasi",
+        title: "Volando sobre el lago Itasi",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-anciana-canasto.jpg",
+        alt: "La anciana del canasto en una aldea de Madagascar",
+        title: "La anciana del canasto",
+      },
+    ],
   },
 ];
 
@@ -45,7 +114,7 @@ export default function LagrimasPage() {
       >
         <div className="mt-10 flex flex-wrap gap-4">
           <ButtonLink href={book.purchaseUrl!}>Comprar libro</ButtonLink>
-          <ButtonLink href={book.sampleUrl!} variant="outline" download>
+          <ButtonLink href="/muestra-lagrimas-errantes" variant="outline">
             Leer muestra
           </ButtonLink>
         </div>
@@ -134,7 +203,78 @@ export default function LagrimasPage() {
               La Caja del Tiempo responde a la intención de quien la porta: amor y
               responsabilidad pueden abrir lo que la codicia convierte en condena.
             </p>
+            <div className="mt-10 border-t border-gold/20 pt-8">
+              <h3 className="font-display text-5xl leading-[1.06] text-ivory sm:text-6xl">
+                El anillo de la hermandad
+              </h3>
+              <p className="mt-6 leading-8 text-parchment">
+                El anillo de la hermandad es una señal de custodia y juramento:
+                quienes lo reconocen aceptan proteger el equilibrio de Yharty y
+                velar para que la profecía no se pierda entre los pliegues del
+                tiempo. No es solo un emblema, sino una alianza silenciosa entre
+                memoria, lealtad y destino.
+              </p>
+            </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="border-y border-parchment/10 bg-ink-soft px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Galería del libro"
+              title="Imágenes de Lágrimas Errantes"
+              description="Tres rutas visuales para recorrer el origen mítico, la expedición y el ritual que sostienen el universo de la novela."
+              centered
+            />
+          </Reveal>
+
+          <div className="mt-16 space-y-20">
+            {gallerySections.map((section, sectionIndex) => (
+              <section key={section.title}>
+                <Reveal>
+                  <div className="grid gap-5 border-b border-gold/20 pb-7 md:grid-cols-[auto_1fr] md:items-end">
+                    <p className="text-[.68rem] font-bold uppercase tracking-[.32em] text-gold-light">
+                      {section.part}
+                    </p>
+                    <div>
+                      <h3 className="font-display text-4xl leading-tight text-ivory sm:text-5xl">
+                        {section.title}
+                      </h3>
+                      <p className="mt-3 font-display text-2xl italic text-parchment">
+                        {section.motto}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+
+                <div className="mt-8 grid gap-6 lg:grid-cols-3">
+                  {section.images.map((item, index) => (
+                    <Reveal key={item.src} delay={(sectionIndex + index) * 70}>
+                      <figure className="group overflow-hidden border border-gold/20 bg-panel">
+                        <div className="relative aspect-[4/3] overflow-hidden">
+                          <Image
+                            src={item.src}
+                            alt={item.alt}
+                            fill
+                            sizes="(min-width: 1024px) 33vw, 100vw"
+                            className="object-cover transition duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-80" />
+                        </div>
+                        <figcaption className="border-t border-gold/15 px-5 py-5">
+                          <p className="font-display text-2xl leading-tight text-ivory">
+                            {item.title}
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </Reveal>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
         </div>
       </section>
 

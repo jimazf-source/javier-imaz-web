@@ -2,7 +2,16 @@ import type { MetadataRoute } from "next";
 import { books, news, siteConfig } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/libros", "/autor", "/bitacora", "/noticias", "/contacto", "/privacidad"];
+  const pages = [
+    "",
+    "/libros",
+    "/autor",
+    "/bitacora",
+    "/noticias",
+    "/contacto",
+    "/privacidad",
+    "/muestra-lagrimas-errantes",
+  ];
   return [
     ...pages.map((path) => ({
       url: `${siteConfig.url}${path}`,
