@@ -35,7 +35,7 @@ export function BookCard({ book }: { book: Book }) {
             alt={`${book.imageLabel} para ${book.title}`}
             width={390}
             height={585}
-            className="max-h-[415px] w-auto max-w-full object-contain shadow-[0_20px_48px_rgba(0,0,0,.55)] transition duration-500 group-hover:scale-[1.025]"
+            className="h-auto max-h-[415px] w-auto max-w-full object-contain shadow-[0_20px_48px_rgba(0,0,0,.55)] transition duration-500 group-hover:scale-[1.025]"
           />
         )}
         <span className="absolute bottom-5 right-5 rounded-full border border-gold/35 bg-ink/85 px-3 py-1 text-[.58rem] font-bold uppercase tracking-[.2em] text-gold-light">

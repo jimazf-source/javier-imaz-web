@@ -34,6 +34,30 @@ const storyLines = [
   },
 ];
 
+const vimeoVideos = [
+  {
+    title: "I. El origen de la leyenda",
+    description:
+      "Una puerta audiovisual al mito de Yharty, las lágrimas dispersas y los símbolos que abren la novela.",
+    embedUrl:
+      "https://player.vimeo.com/video/1194359474?title=0&byline=0&portrait=0&badge=0&autopause=0",
+  },
+  {
+    title: "II. En busca de un mito",
+    description:
+      "El viaje, la expedición y la llamada de aquello que permanece oculto entre mapas, memoria y destino.",
+    embedUrl:
+      "https://player.vimeo.com/video/1194537524?title=0&byline=0&portrait=0&badge=0&autopause=0",
+  },
+  {
+    title: "III. La búsqueda de lo imposible",
+    description:
+      "El tramo final del enigma: la frontera entre la aventura, el ritual y lo que el tiempo no quiere entregar.",
+    embedUrl:
+      "https://player.vimeo.com/video/1194543577?title=0&byline=0&portrait=0&badge=0&autopause=0",
+  },
+];
+
 const gallerySections = [
   {
     part: "Primera parte",
@@ -42,18 +66,49 @@ const gallerySections = [
     images: [
       {
         src: "/assets/lagrimas-gallery/parte-1-shricopia.jpg",
-        alt: "Diosa Shricopia nacida de pétalos dorados",
-        title: "De sus pétalos dorados nació la diosa Shricopia",
+        alt: "Diosa Shri nacida de pétalos dorados",
+        title: "De sus pétalos dorados nació la diosa Shri",
+        fit: "contain",
       },
       {
-        src: "/assets/lagrimas-gallery/parte-1-thron-baculo.jpg",
-        alt: "Thron sosteniendo el báculo dorado",
-        title: "Thron y el Báculo",
-      },
-      {
-        src: "/assets/lagrimas-gallery/parte-1-bo-gema.jpg",
+        src: "/assets/lagrimas-gallery/parte-1-02-bo-gema.jpg",
         alt: "Bo encuentra la gran gema en la mina",
         title: "Bo encuentra la gran Gema",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-03-muerte-veronica.jpg",
+        alt: "Muerte de Verónica",
+        title: "Muerte de Verónica",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-04-sinaplius.jpg",
+        alt: "Sinaplius con la Caja del Tiempo",
+        title: "Sinaplius",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-05-ruta-raymond.jpg",
+        alt: "Mapa del viaje de Raymond",
+        title: "La ruta de Raymond",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-06-expedicion-tibet.jpg",
+        alt: "Expedición al Tíbet",
+        title: "Expedición al Tíbet",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-07-raymond-amul.jpg",
+        alt: "Raymond recibe de Amul la Lágrima de Yharty",
+        title: "Raymond recibe de Amul la Lágrima de Yharty",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-08-regalo.jpg",
+        alt: "Zami recibe el regalo",
+        title: "El regalo",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-1-09-zami-desvan.jpg",
+        alt: "Zami lee en el desván",
+        title: "Zami en el desván",
       },
     ],
   },
@@ -77,6 +132,36 @@ const gallerySections = [
         alt: "Botadura del barco de la gran expedición",
         title: "La gran expedición",
       },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-04-captura.jpg",
+        alt: "La captura en alta mar",
+        title: "La captura",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-05-spirit.jpg",
+        alt: "El Spirit navegando a toda vela",
+        title: "El Spirit",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-06-guerra-opio.jpg",
+        alt: "Rutas comerciales durante la Guerra del Opio",
+        title: "Guerra del Opio",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-07-isla-do-fogo.jpg",
+        alt: "Globo sobrevolando Isla do Fogo",
+        title: "Isla do Fogo",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-08-polizon.jpg",
+        alt: "Un polizón a bordo del barco",
+        title: "Un polizón",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-2-09-relato-capitan-smith.jpg",
+        alt: "El capitán Smith relata la travesía",
+        title: "El relato del Capitán Smith",
+      },
     ],
   },
   {
@@ -90,14 +175,44 @@ const gallerySections = [
         title: "Madagascar",
       },
       {
-        src: "/assets/lagrimas-gallery/parte-3-lago-itasi.jpg",
-        alt: "Globo sobrevolando el lago Itasi",
-        title: "Volando sobre el lago Itasi",
+        src: "/assets/lagrimas-gallery/parte-3-02-rescate.jpg",
+        alt: "El rescate en el pecio",
+        title: "El rescate",
       },
       {
-        src: "/assets/lagrimas-gallery/parte-3-anciana-canasto.jpg",
-        alt: "La anciana del canasto en una aldea de Madagascar",
-        title: "La anciana del canasto",
+        src: "/assets/lagrimas-gallery/parte-3-03-pecio-capitan-kidd.jpg",
+        alt: "El pecio del Capitán Kidd bajo el agua",
+        title: "El pecio del Capitán Kidd",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-04-descenso-barco.jpg",
+        alt: "Preparando el descenso al barco hundido",
+        title: "Preparando el descenso al barco",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-05-desastre.jpg",
+        alt: "El desastre entre las naves",
+        title: "El desastre",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-06-canton.jpg",
+        alt: "Navegando hacia Cantón",
+        title: "Navegando hacia Cantón",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-07-li-xin.jpg",
+        alt: "Li Xin ante el barco incendiado",
+        title: "Li Xin",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-08-buscando-rajest.jpg",
+        alt: "Buscando a Rajest en las calles de Cantón",
+        title: "Buscando a Rajest",
+      },
+      {
+        src: "/assets/lagrimas-gallery/parte-3-09-maling.jpg",
+        alt: "El encuentro con Maling",
+        title: "El encuentro con Maling",
       },
     ],
   },
@@ -129,7 +244,7 @@ export default function LagrimasPage() {
                 alt="Portada de Lágrimas Errantes"
                 width={397}
                 height={592}
-                className="w-full shadow-2xl"
+                className="h-auto w-full object-contain shadow-2xl"
               />
               <dl className="mt-7 space-y-4 text-sm">
                 <div>
@@ -219,6 +334,46 @@ export default function LagrimasPage() {
         </div>
       </section>
 
+      <section className="px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Videos del libro"
+              title="Lágrimas Errantes en movimiento"
+              description="Tres piezas breves para entrar en el pulso visual de la novela: origen, expedición y ritual."
+              centered
+            />
+          </Reveal>
+
+          <div className="mt-14 grid gap-7 lg:grid-cols-3">
+            {vimeoVideos.map((video, index) => (
+              <Reveal key={video.embedUrl} delay={index * 90}>
+                <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20">
+                  <div className="relative aspect-video bg-ink">
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
+                    />
+                  </div>
+                  <div className="border-t border-gold/15 p-6">
+                    <h3 className="font-display text-3xl leading-tight text-ivory">
+                      {video.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-muted">
+                      {video.description}
+                    </p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-parchment/10 bg-ink-soft px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
@@ -259,7 +414,11 @@ export default function LagrimasPage() {
                             alt={item.alt}
                             fill
                             sizes="(min-width: 1024px) 33vw, 100vw"
-                            className="object-cover transition duration-700 group-hover:scale-105"
+                            className={`transition duration-700 group-hover:scale-105 ${
+                              item.fit === "contain"
+                                ? "object-contain"
+                                : "object-cover"
+                            }`}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-80" />
                         </div>
