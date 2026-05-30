@@ -10,6 +10,16 @@ function parseSender(value: string) {
   return { name: match[1].trim(), email: match[2].trim() };
 }
 
+function getBrevoApiKey() {
+  return process.env.BREVO_API_KEY || process.env.CLAVE_API_BREVO || "";
+}
+
+function getListId(...values: Array<string | undefined>) {
+  const value = values.find(Boolean)?.trim() || "";
+  const digits = value.match(/\d+/)?.[0] || "";
+  return Number(digits);
+}
+
 async function addBrevoContact({
   apiKey,
   email,
@@ -68,7 +78,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const apiKey = process.env.BREVO_API_KEY;
+  const apiKey = getBrevoApiKey();
   const to = process.env.CONTACT_TO_EMAIL || "infolagrimas@lagrimaserrantes.com";
   const from = parseSender(
     process.env.CONTACT_FROM_EMAIL || "Web Lágrimas Errantes <infolagrimas@lagrimaserrantes.com>",
@@ -83,8 +93,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const contactListId = Number(process.env.BREVO_CONTACT_LIST_ID);
-  const newsletterListId = Number(process.env.BREVO_LIST_ID);
+  const contactListId = getListId(process.env.BREVO_CONTACT_LIST_ID);
+  const newsletterListId = getListId(process.env.BREVO_LIST_ID, process.env.ID_LISTA_BREVO);
   await addBrevoContact({ apiKey, email, name, listId: contactListId });
   if (body.newsletterConsent === "on") {
     await addBrevoContact({ apiKey, email, name, listId: newsletterListId });

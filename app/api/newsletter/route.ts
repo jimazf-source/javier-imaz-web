@@ -1,5 +1,15 @@
 import { NextResponse } from "next/server";
 
+function getBrevoApiKey() {
+  return process.env.BREVO_API_KEY || process.env.CLAVE_API_BREVO || "";
+}
+
+function getListId(...values: Array<string | undefined>) {
+  const value = values.find(Boolean)?.trim() || "";
+  const digits = value.match(/\d+/)?.[0] || "";
+  return Number(digits);
+}
+
 export async function POST(request: Request) {
   const body = await request.json();
   const email = typeof body.email === "string" ? body.email.trim().slice(0, 254) : "";
@@ -7,8 +17,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Introduce un correo válido." }, { status: 400 });
   }
 
-  const apiKey = process.env.BREVO_API_KEY;
-  const listId = Number(process.env.BREVO_LIST_ID);
+  const apiKey = getBrevoApiKey();
+  const listId = getListId(process.env.BREVO_LIST_ID, process.env.ID_LISTA_BREVO);
   if (!apiKey || !listId) {
     return NextResponse.json(
       {
