@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Novelas de misterio, tiempo y leyenda.",
   description:
     "Web literaria oficial de Javier Imaz Fandos: novelas, poesía y ensayo sobre misterio, memoria y tiempo.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://lagrimaserrantes.com",
   instagram: "https://www.instagram.com/lagrimaserrantes",
   instagramHandle: "@lagrimaserrantes",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
