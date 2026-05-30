@@ -13,7 +13,7 @@ export const metadata = createMetadata({
   description:
     "Lágrimas Errantes. Un bucle entre el tiempo y la leyenda, novela de Javier Imaz Fandos publicada por Universo de Letras.",
   path: "/lagrimas-errantes",
-  image: "/assets/hero-lagrimas-errantes.jpg",
+  image: "/assets/og-lagrimas-errantes-whatsapp.jpg",
 });
 
 const storyLines = [
