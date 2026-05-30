@@ -26,10 +26,9 @@ export default function PrivacyPage() {
           <div>
             <h2 className="font-display text-3xl text-ivory">Servicios de envío</h2>
             <p className="mt-3">
-              Antes de activar los formularios en producción se configurará el proveedor
-              de correo y la plataforma de suscripción elegida. Esta página deberá
-              completarse con los datos legales y la política definitiva antes de publicar
-              formularios activos.
+              Los formularios se gestionan mediante Brevo: los mensajes de contacto
+              se utilizan para responder a la consulta recibida, y la newsletter solo
+              se envía a quienes solicitan expresamente recibir novedades.
             </p>
           </div>
           <div>

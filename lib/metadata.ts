@@ -16,6 +16,7 @@ export function createMetadata({
 }: PageMetadata): Metadata {
   const fullTitle = `${title} | ${siteConfig.name}`;
   const url = `${siteConfig.url}${path}`;
+  const imageUrl = image.startsWith("http") ? image : `${siteConfig.url}${image}`;
 
   return {
     title,
@@ -28,13 +29,20 @@ export function createMetadata({
       siteName: siteConfig.name,
       locale: "es_ES",
       type: "website",
-      images: [{ url: image, alt: title }],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [image],
+      images: [imageUrl],
     },
   };
 }

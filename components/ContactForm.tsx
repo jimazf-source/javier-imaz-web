@@ -33,9 +33,9 @@ export function ContactForm() {
       </div>
       <div>
         <label className="mb-2 block text-sm text-parchment" htmlFor="email">
-          Email
+          Correo electrónico
         </label>
-        <input required id="email" type="email" name="email" className="form-field" />
+        <input required id="email" type="email" name="email" autoComplete="email" className="form-field" />
       </div>
       <div>
         <label className="mb-2 block text-sm text-parchment" htmlFor="message">
@@ -43,6 +43,14 @@ export function ContactForm() {
         </label>
         <textarea required id="message" name="message" rows={7} className="form-field resize-none" />
       </div>
+      <label className="flex gap-3 text-sm leading-6 text-muted">
+        <input
+          type="checkbox"
+          name="newsletterConsent"
+          className="mt-1 h-4 w-4 rounded border-parchment/30 bg-ink text-gold"
+        />
+        También quiero recibir novedades, presentaciones y lanzamientos de Lágrimas Errantes.
+      </label>
       <button
         type="submit"
         disabled={submitting}
