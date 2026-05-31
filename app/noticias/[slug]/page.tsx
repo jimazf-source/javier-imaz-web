@@ -61,11 +61,50 @@ export default async function NewsArticlePage({
           {article.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          <div className="pt-8">
-            <ButtonLink href="/noticias" variant="outline">
-              Volver a noticias
-            </ButtonLink>
-          </div>
+        </Reveal>
+
+        {article.gallery?.length ? (
+          <Reveal delay={140} className="mt-16">
+            <p className="flex items-center gap-4 text-[.68rem] font-bold uppercase tracking-[.3em] text-gold-light before:h-px before:w-9 before:bg-gold">
+              Galería
+            </p>
+            <h2 className="mt-5 font-display text-4xl text-ivory sm:text-5xl">
+              Instantes de la campaña
+            </h2>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              {article.gallery.map((item, index) => (
+                <figure
+                  key={`${item.src}-${index}`}
+                  className="overflow-hidden border border-gold/15 bg-panel/70 shadow-2xl shadow-black/20"
+                >
+                  <div
+                    className={`relative bg-black/25 ${
+                      item.fit === "contain" ? "aspect-[3/4]" : "aspect-[4/3]"
+                    }`}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className={item.fit === "contain" ? "object-contain p-3" : "object-cover"}
+                    />
+                  </div>
+                  {item.caption ? (
+                    <figcaption className="border-t border-gold/10 px-5 py-4 text-sm leading-6 text-parchment/80">
+                      {item.caption}
+                    </figcaption>
+                  ) : null}
+                </figure>
+              ))}
+            </div>
+          </Reveal>
+        ) : null}
+
+        <Reveal delay={180} className="mx-auto mt-12 max-w-3xl">
+          <ButtonLink href="/noticias" variant="outline">
+            Volver a noticias
+          </ButtonLink>
         </Reveal>
       </div>
     </article>
