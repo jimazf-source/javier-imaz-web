@@ -1,5 +1,10 @@
 import Image from "next/image";
-import { ButtonLink } from "@/components/ButtonLink";
+<ButtonLink href="#">
+  Comprar libro
+</ButtonLink>
+<ButtonLink href="/downloads/donde-aun-respira-tu-nombre-muestra.pdf" variant="outline" download>
+  Leer muestra
+</ButtonLink>
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -307,9 +312,12 @@ export default function DondeAunRespiraPage() {
             "Hay amores que, aunque imposibles, se quedan para siempre donde importa: en la voz que se atreve a convertirlos en literatura."
           </blockquote>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <ButtonLink href="#" variant="outline">
-              Comprar — Próximamente
-            </ButtonLink>
+            <ButtonLink href="#">
+  Comprar Donde aún respira tu nombre
+</ButtonLink>
+<ButtonLink href="/downloads/donde-aun-respira-tu-nombre-muestra.pdf" variant="outline" download>
+  Descargar capítulo de muestra
+</ButtonLink>
           </div>
         </Reveal>
       </section>
