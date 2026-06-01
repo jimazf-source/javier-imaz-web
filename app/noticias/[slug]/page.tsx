@@ -72,7 +72,7 @@ export default async function NewsArticlePage({
               Instantes de la campaña
             </h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
-              {article.gallery.map((item: NewsImage, index: number) => (
+              {article.gallery.map((item, index) => (
                 <figure
                   key={`${item.src}-${index}`}
                   className="overflow-hidden border border-gold/15 bg-panel/70 shadow-2xl shadow-black/20"
