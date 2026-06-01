@@ -306,17 +306,17 @@ export const news: NewsPost[] = [
         caption: "El Paseo de la Independencia, escenario de la fiesta del libro aragonés",
       },
       {
-        src: "/assets/EVENTOS/A-4-_San_Jorge_.png",
+        src: "/assets/EVENTOS/A-4-San-Jorge.png",
         alt: "Javier Imaz Fandos junto a un lector en San Jorge",
         caption: "Momentos de encuentro con los lectores",
       },
       {
-        src: "/assets/EVENTOS/A-5-San_Jorge-Libro.png",
+        src: "/assets/EVENTOS/A-5-San-Jorge-Libro.png",
         alt: "Ejemplares de Lágrimas Errantes en la caseta de San Jorge",
         caption: "Lágrimas Errantes, presente en la jornada más literaria del año en Aragón",
       },
       {
-        src: "/assets/EVENTOS/A-6-San_Jorge-Libro.png",
+        src: "/assets/EVENTOS/A-6-San-Jorge-Libro.png",
         alt: "Roll-up de Lágrimas Errantes con código QR",
         caption: "Universo de Letras · Grupo Editorial Planeta",
         fit: "contain",
@@ -331,7 +331,7 @@ export const news: NewsPost[] = [
     title: "Lágrimas Errantes en FNAC Zaragoza: una noche memorable",
     excerpt:
       "Sala llena, guitarra en vivo y una conversación que convirtió la presentación en algo más que un acto literario.",
-    image: "/assets/EVENTOS/B-3_-Fnac.png",
+    image: "/assets/EVENTOS/B-3.-Fnac.png",
     body: [
       "El 22 de mayo, a las 19 horas, la sala de eventos de FNAC Zaragoza —Plaza España, Calle del Coso 25-27— acogió la presentación oficial de Lágrimas Errantes ante un público que llenó el aforo hasta el último asiento.",
       "La velada fue mucho más que una presentación al uso. Con música de guitarra en directo como hilo conductor, el autor dialogó con el presentador sobre el origen de la novela, la Caja del Tiempo y el universo que se despliega entre Gante, el siglo XIX y la España de 1942. El ambiente resultó ameno, cálido y cargado de esa energía que solo surge cuando el libro conecta de verdad con quienes lo escuchan.",
@@ -345,12 +345,12 @@ export const news: NewsPost[] = [
         fit: "contain",
       },
       {
-        src: "/assets/EVENTOS/B-2_Fnac.png",
+        src: "/assets/EVENTOS/B-2.Fnac.png",
         alt: "Javier Imaz Fandos junto al cartel de Lágrimas Errantes en FNAC",
         caption: "El autor, ante el expositor de la novela en FNAC Zaragoza",
       },
       {
-        src: "/assets/EVENTOS/B-3_-Fnac.png",
+        src: "/assets/EVENTOS/B-3.-Fnac.png",
         alt: "Mesa de presentación con guitarra en directo en FNAC Zaragoza",
         caption: "Música, palabra y libro: una presentación diferente",
       },
@@ -379,7 +379,7 @@ export const news: NewsPost[] = [
     title: "Día del Libro en Zaragoza: las expectativas cumplidas",
     excerpt:
       "La Caseta 65-66 del Parque José Antonio Labordeta reunió a lectores, amigos y el mejor ambiente para cerrar una primavera literaria extraordinaria.",
-    image: "/assets/EVENTOS/C-2_Di_a_dellibro_Zaragoza.png",
+    image: "/assets/EVENTOS/C-2-Dia-del-Libro-Zaragoza.png",
     body: [
       "El 30 de mayo, en la Caseta 65-66 del Parque José Antonio Labordeta de Zaragoza, Lágrimas Errantes cerró una primavera de presentaciones a la altura de los mejores momentos del año. La afluencia de público fue notable, el ambiente resultó distendido y festivo, y las expectativas —ya de por sí elevadas tras el éxito de las jornadas anteriores— quedaron plenamente cumplidas.",
       "La jornada estuvo marcada por el encuentro cercano con los lectores: conversaciones tranquilas, familias que se acercaban a la caseta, amigos que aprovechaban el día para llevarse un ejemplar dedicado. Ese calor humano que solo se encuentra en las ferias del libro al aire libre.",
@@ -387,33 +387,33 @@ export const news: NewsPost[] = [
     ],
     gallery: [
       {
-        src: "/assets/EVENTOS/C-1-Di_a_del_Libro_Zaragoza.png",
+        src: "/assets/EVENTOS/C-1-Dia-del-Libro-Zaragoza.png",
         alt: "Cartel del Día del Libro en Zaragoza",
         caption: "Firma de la obra · 30 de mayo · Caseta 65-66, Parque Labordeta",
         fit: "contain",
       },
       {
-        src: "/assets/EVENTOS/C-2_Di_a_dellibro_Zaragoza.png",
+        src: "/assets/EVENTOS/C-2-Dia-del-Libro-Zaragoza.png",
         alt: "Javier Imaz Fandos con lectores en el Día del Libro",
         caption: "Encuentro con los lectores en el Parque Labordeta",
       },
       {
-        src: "/assets/EVENTOS/C-3_Di_a_del_Libro_Zaragoza.png",
+        src: "/assets/EVENTOS/C-3-Dia-del-Libro-Zaragoza.png",
         alt: "Javier Imaz Fandos con un lector en la caseta",
         caption: "Momentos de encuentro y dedicatorias",
       },
       {
-        src: "/assets/EVENTOS/C-4-Di_a_del_Libro_Zaragoza.png",
+        src: "/assets/EVENTOS/C-4-Dia-del-Libro-Zaragoza.png",
         alt: "Grupo de personas en la caseta del Día del Libro",
         caption: "El ambiente festivo y literario del Parque Labordeta",
       },
       {
-        src: "/assets/EVENTOS/C-5-Dia_del_libro_Libro.png",
+        src: "/assets/EVENTOS/C-5-Dia-del-Libro.png",
         alt: "Ejemplares de Lágrimas Errantes en el Día del Libro",
         caption: "Lágrimas Errantes · Universo de Letras · Grupo Editorial Planeta",
       },
       {
-        src: "/assets/EVENTOS/C-6_-Di_a_delLibro.png",
+        src: "/assets/EVENTOS/C-6-Dia-del-Libro.png",
         alt: "Grupo de personas junto al autor en la caseta",
         caption: "Con el equipo de la Librería Albareda y amigos",
       },
