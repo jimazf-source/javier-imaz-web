@@ -302,169 +302,46 @@ export type NewsImage = {
 
 export const news: NewsPost[] = [
   {
-    slug: "feria-libro-zaragoza-labordeta-albareda",
-    category: "Feria del libro",
-    date: "2026-05-30",
-    displayDate: "30 mayo 2026",
-    title: "La Feria del Libro confirmó el viaje",
-    excerpt:
-      "En el Parque José Antonio Labordeta, junto a Librería Albareda, Lágrimas Errantes encontró lectores, firmas y una mañana de ventas memorables.",
-    image: "/assets/noticias/3-2.png",
-    body: [
-      "El 30 de mayo, Lágrimas Errantes volvió a salir al encuentro de los lectores en la Feria del Libro de Zaragoza, en el Parque José Antonio Labordeta, de la mano de Librería Albareda.",
-      "La caseta 65-66 fue una pequeña estación de paso para quienes se acercaron por curiosidad y se quedaron por el misterio: conversaciones, firmas, recomendaciones y ejemplares que encontraron casa.",
-      "La afluencia de público, la acogida de la obra y el ritmo de ventas hicieron de la jornada una de esas fechas que confirman que un libro también viaja cuando alguien lo abre.",
-    ],
-    gallery: [
-      {
-        src: "/assets/noticias/3-1.png",
-        alt: "Cartel de la firma de Lágrimas Errantes en la Feria del Libro de Zaragoza",
-        caption:
-          "La cita del 30 de mayo en la caseta 65-66 del Parque José Antonio Labordeta.",
-        fit: "contain",
-      },
-      {
-        src: "/assets/noticias/3-2.png",
-        alt: "Javier Imaz Fandos firmando ejemplares en la Feria del Libro de Zaragoza",
-        caption: "Firmas y conversación en una mañana de gran afluencia.",
-      },
-      {
-        src: "/assets/noticias/3-3.png",
-        alt: "Mesa de Lágrimas Errantes en la Feria del Libro de Zaragoza",
-        caption:
-          "La novela compartió mesa con otros títulos y muchos lectores curiosos.",
-      },
-      {
-        src: "/assets/noticias/3-4.png",
-        alt: "Javier Imaz Fandos con lectores en la caseta de Librería Albareda",
-        caption:
-          "El encuentro con los lectores convirtió la jornada en celebración.",
-      },
-      {
-        src: "/assets/noticias/A.png",
-        alt: "Imagen promocional de Lágrimas Errantes con varios ejemplares",
-        caption:
-          "Lágrimas Errantes, lista para seguir encontrando lectores.",
-        fit: "contain",
-      },
-    ],
-  },
-  {
     slug: "presentacion-lagrimas-errantes-fnac-zaragoza",
     category: "Presentación",
     date: "2026-05-22",
     displayDate: "22 mayo 2026",
-    title: "Una tarde llena en FNAC Zaragoza",
+    title: "Lágrimas Errantes en FNAC Zaragoza",
     excerpt:
-      "La sala de FNAC Zaragoza se llenó para presentar Lágrimas Errantes: conversación, emoción lectora y una acogida que confirmó el pulso de la novela.",
-    image: "/assets/noticias/2-2.png",
+      "Presentación de la novela publicada por Universo de Letras, Grupo Editorial Planeta.",
+    image: "/assets/portada-lagrimas-errantes.jpg",
     body: [
-      "El 22 de mayo, Lágrimas Errantes tuvo su presentación en FNAC Zaragoza, en la calle del Coso, con una sala llena y un público entregado desde el primer minuto.",
-      "La conversación convirtió la novela en una puerta abierta: misterio, tiempo, leyenda, memoria y ese impulso lector que aparece cuando una historia empieza a respirar fuera del libro.",
-      "Fue una tarde de gran afluencia, presentación cuidada y ventas; una de esas citas que no solo anuncian una obra, sino que la ponen en marcha.",
-    ],
-    gallery: [
-      {
-        src: "/assets/noticias/2-1.png",
-        alt: "Cartel de la presentación de Lágrimas Errantes en FNAC Zaragoza",
-        caption:
-          "La presentación del 22 de mayo en FNAC Plaza España, calle del Coso.",
-        fit: "contain",
-      },
-      {
-        src: "/assets/noticias/2-2.png",
-        alt: "Presentación de Lágrimas Errantes con público en FNAC Zaragoza",
-        caption:
-          "Una sala llena para hablar de tiempo, leyenda y misterio.",
-      },
-      {
-        src: "/assets/noticias/2-3.png",
-        alt: "Mesa de presentación de Lágrimas Errantes en FNAC Zaragoza",
-        caption:
-          "La novela encontró voz propia entre preguntas, música y conversación.",
-      },
-      {
-        src: "/assets/noticias/2-4.png",
-        alt: "Javier Imaz Fandos junto al expositor de Lágrimas Errantes en FNAC",
-        caption:
-          "El libro, el cartel y la firma: una tarde de lanzamiento muy especial.",
-      },
-      {
-        src: "/assets/noticias/D.png",
-        alt: "Imagen promocional de Lágrimas Errantes en ambiente de biblioteca",
-        caption:
-          "Una imagen editorial para prolongar la atmósfera de la presentación.",
-        fit: "contain",
-      },
+      "Lágrimas Errantes. Un bucle entre el tiempo y la leyenda se presentó en FNAC Zaragoza el 22 de mayo de 2026.",
+      "La obra reúne aventura histórica, fantasía mítica y misterio en una narración que recorre Gante, los mares del siglo XIX y la España de 1942.",
+      "El encuentro situó en el centro la Caja del Tiempo: el objeto nacido de una reflexión íntima sobre el valor del tiempo compartido.",
     ],
   },
   {
-    slug: "san-jorge-zaragoza-libreria-albareda",
-    category: "Firma",
-    date: "2026-04-23",
-    displayDate: "23 abril 2026",
-    title: "San Jorge abrió la ruta de Lágrimas Errantes",
+    slug: "la-caja-del-tiempo-un-objeto-una-pregunta",
+    category: "Universo literario",
+    date: "2026-05-01",
+    displayDate: "Mayo 2026",
+    title: "La Caja del Tiempo: un objeto, una pregunta",
     excerpt:
-      "En pleno Paseo de la Independencia, la novela celebró el Día del Libro con Librería Albareda entre lectores, firmas y la energía de Zaragoza.",
-    image: "/assets/noticias/1-2.png",
+      "El artefacto que enlaza alquimia, memoria y responsabilidad en el universo narrativo.",
+    image: "/assets/caja-del-tiempo.jpg",
     body: [
-      "El 23 de abril, Día de San Jorge, Lágrimas Errantes salió a la calle en Zaragoza con Librería Albareda, en el Paseo de la Independencia.",
-      "Entre firmas, conversaciones y lectores que se acercaban atraídos por la portada y por el misterio de la caja, la jornada tuvo esa mezcla de celebración popular y descubrimiento literario que solo ocurre en el Día del Libro.",
-      "La afluencia de público, la cercanía de los lectores y las ventas hicieron de San Jorge el primer gran impulso de la campaña.",
+      "Forjada en el origen mítico del relato, la Caja del Tiempo no es únicamente una pieza antigua: responde a la intención de quien se aproxima a ella.",
+      "Sus materiales, su reloj y su rubí abren una pregunta que atraviesa ambos libros: no si podemos retener el tiempo, sino qué merecemos hacer con él.",
     ],
-    gallery: [
-      {
-        src: "/assets/noticias/1-1.png",
-        alt: "Cartel de firma de Lágrimas Errantes por San Jorge",
-        caption:
-          "La firma de San Jorge en Librería Albareda, Paseo Independencia 29.",
-        fit: "contain",
-      },
-      {
-        src: "/assets/noticias/1-2.png",
-        alt: "Javier Imaz Fandos firmando Lágrimas Errantes el Día de San Jorge",
-        caption: "Firmas, lectores y mucho movimiento en el Día del Libro.",
-      },
-      {
-        src: "/assets/noticias/1-3.png",
-        alt: "Mesa de Lágrimas Errantes durante San Jorge en Zaragoza",
-        caption:
-          "Ejemplares preparados para una jornada de ventas y descubrimientos.",
-      },
-      {
-        src: "/assets/noticias/1-4.png",
-        alt: "Javier Imaz Fandos mostrando Lágrimas Errantes en San Jorge",
-        caption:
-          "El libro como punto de encuentro en pleno Paseo de la Independencia.",
-      },
-      {
-        src: "/assets/noticias/1-5.png",
-        alt: "Imagen promocional de Lágrimas Errantes ya a la venta",
-        caption:
-          "Material de campaña para acompañar el lanzamiento de la novela.",
-        fit: "contain",
-      },
-      {
-        src: "/assets/noticias/1-6.png",
-        alt: "Cartel de Lágrimas Errantes con código QR",
-        caption:
-          "El QR acercó la novela a lectores que querían seguir la pista después.",
-        fit: "contain",
-      },
-      {
-        src: "/assets/noticias/B.png",
-        alt: "Portada promocional de Lágrimas Errantes",
-        caption:
-          "La portada como llamada visual al misterio de la Caja del Tiempo.",
-        fit: "contain",
-      },
-      {
-        src: "/assets/noticias/C.png",
-        alt: "Ejemplares de Lágrimas Errantes sobre una mesa",
-        caption:
-          "Una imagen de campaña para presentar la novela en su versión más editorial.",
-        fit: "contain",
-      },
+  },
+  {
+    slug: "la-hermandad-del-anillo",
+    category: "Universo literario",
+    date: "2026-04-01",
+    displayDate: "Abril 2026",
+    title: "La hermandad del anillo: vela por que se cumpla la profecía",
+    excerpt:
+      "El anillo de Yharty reúne custodia, lealtad y el compromiso de proteger el destino anunciado.",
+    image: "/assets/anillo-yharty.jpg",
+    body: [
+      "La hermandad custodia el anillo como emblema de Yharty y del juramento que atraviesa generaciones: velar por que la profecía encuentre su cumplimiento.",
+      "En este universo de ciencia, mito y aventura, la lealtad es una fuerza capaz de unir las rutas de Lágrimas Errantes con los secretos de la Caja del Tiempo.",
     ],
   },
 ];
