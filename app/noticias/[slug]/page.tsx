@@ -2,7 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Reveal } from "@/components/Reveal";
-import { news } from "@/data/site";
+import { news, type NewsImage } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
