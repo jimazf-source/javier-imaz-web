@@ -58,7 +58,7 @@ export default async function NewsArticlePage({
           />
         </Reveal>
         <Reveal delay={100} className="mx-auto mt-12 max-w-3xl space-y-7 text-lg leading-9 text-parchment">
-          {article.body.map((paragraph) => (
+          {article.body.map((paragraph: string) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </Reveal>
