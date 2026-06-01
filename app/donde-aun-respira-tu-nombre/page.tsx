@@ -45,7 +45,7 @@ export default function DondeAunRespiraPage() {
       >
         <div className="mt-10 flex flex-wrap gap-4">
           <ButtonLink href="#">Comprar libro</ButtonLink>
-          <ButtonLink href="/downloads/donde-aun-respira-tu-nombre-muestra.pdf" variant="outline" download>
+          <ButtonLink href="/muestra-donde-aun-respira" variant="outline">
             Leer muestra
           </ButtonLink>
         </div>
