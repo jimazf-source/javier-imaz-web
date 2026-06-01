@@ -19,7 +19,7 @@ export default function NewsPage() {
         eyebrow="Cuaderno editorial"
         title="Noticias"
         subtitle="Presentaciones, proceso creativo y nuevas señales desde el universo literario."
-        image="/assets/mapa-rutas-literarias.jpg"
+        image="/assets/mapa-raymond.png"
       />
       <section className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-7 md:grid-cols-2 lg:grid-cols-3">
