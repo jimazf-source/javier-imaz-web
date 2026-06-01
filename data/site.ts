@@ -250,7 +250,28 @@ export const navigation = [
   { label: "Bitácora", href: "/bitacora" },
   { label: "Noticias", href: "/noticias" },
   { label: "Contacto", href: "/contacto" },
-];export const news: NewsPost[] = [
+];
+
+export type NewsImage = {
+  src: string;
+  alt: string;
+  caption?: string;
+  fit?: "cover" | "contain";
+};
+
+export type NewsPost = {
+  slug: string;
+  category: string;
+  date: string;
+  displayDate: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  body: string[];
+  gallery?: NewsImage[];
+};
+
+export const news: NewsPost[] = [
   // ── EVENTOS Y PRESENTACIONES ──────────────────────────────────────
   {
     slug: "san-jorge-zaragoza-2026",
