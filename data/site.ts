@@ -133,6 +133,8 @@ export const books: Book[] = [
     image: "/assets/portada-donde-aun-respira-frontal.jpg",
     imageLabel: "Portada aportada",
     href: "/donde-aun-respira-tu-nombre",
+    sampleUrl: "/downloads/donde-aun-respira-tu-nombre-muestra.pdf",
+    purchaseUrl: "#",
     shortDescription:
       "Una cartografía emocional en 53 poemas comentados: el amor que no se olvida, sino que se transforma en lenguaje.",
     published: "2026",
