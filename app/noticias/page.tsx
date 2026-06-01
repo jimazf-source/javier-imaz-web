@@ -9,7 +9,7 @@ export const metadata = createMetadata({
   description:
     "Novedades editoriales, presentaciones y proceso creativo de Javier Imaz Fandos.",
   path: "/noticias",
-  image: "/assets/mapa-rutas-literarias.jpg",
+  image: "/assets/mapa-raymond.png",
 });
 
 export default function NewsPage() {
