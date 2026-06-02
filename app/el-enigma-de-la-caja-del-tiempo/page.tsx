@@ -21,19 +21,34 @@ const gallery = [
     caption: "La caja y su mecanismo",
   },
   {
-    src: "/assets/gante-atmosfera.jpg",
-    alt: "Ciudad europea antigua al atardecer",
+    src: "/assets/gante-atmosfera-caja-tiempo.png",
+    alt: "Archivo europeo contemporáneo con la Caja del Tiempo sobre una mesa",
     caption: "Gante y las rutas antiguas",
   },
   {
-    src: "/assets/anillo-yharty.jpg",
-    alt: "Anillo con forma de tortuga y piedras azules",
-    caption: "La señal de Yharty",
+    src: "/assets/enigma-adrian-gante-caja-tiempo.png",
+    alt: "Adrián restaurando la Caja del Tiempo en Gante",
+    caption: "Adrián en Gante",
   },
   {
-    src: "/assets/mapa-rutas-literarias.jpg",
-    alt: "Mapa ilustrado de expediciones y secretos",
-    caption: "Archivos y expediciones",
+    src: "/assets/enigma-leia-estambul-caja-tiempo.png",
+    alt: "Leila investigando la Caja del Tiempo en Estambul",
+    caption: "Leila en Estambul",
+  },
+  {
+    src: "/assets/enigma-adrian-leia-psara-caja-tiempo-1.png",
+    alt: "Adrián y Leila sobre un barco frente a Psará al atardecer",
+    caption: "Rumbo a Psará",
+  },
+  {
+    src: "/assets/enigma-adrian-leia-psara-caja-tiempo-2.png",
+    alt: "Adrián y Leila en la costa de Psará junto a la Caja del Tiempo",
+    caption: "La noche de Psará",
+  },
+  {
+    src: "/assets/enigma-adrian-leia-psara-caja-tiempo-3.png",
+    alt: "Adrián y Leila estudiando mapas con la Caja del Tiempo bajo la luna",
+    caption: "El campamento del enigma",
   },
 ];
 
@@ -137,10 +152,10 @@ export default function EnigmaPage() {
           </Reveal>
           <Reveal delay={90}>
             <Image
-              src="/assets/gante-atmosfera.jpg"
-              width={1400}
-              height={793}
-              alt="Vista atmosférica de una ciudad histórica europea"
+              src="/assets/gante-atmosfera-caja-tiempo.png"
+              width={1822}
+              height={863}
+              alt="Archivo europeo contemporáneo con la Caja del Tiempo sobre una mesa"
               className="border border-gold/20 shadow-2xl"
             />
           </Reveal>
