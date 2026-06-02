@@ -45,11 +45,6 @@ const gallery = [
     alt: "Adrián y Leila en la costa de Psará junto a la Caja del Tiempo",
     caption: "La noche de Psará",
   },
-  {
-    src: "/assets/enigma-adrian-leia-psara-caja-tiempo-3.png",
-    alt: "Adrián y Leila estudiando mapas con la Caja del Tiempo bajo la luna",
-    caption: "El campamento del enigma",
-  },
 ];
 
 export default function EnigmaPage() {
