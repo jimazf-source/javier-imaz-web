@@ -174,9 +174,8 @@ export default function DondeAunRespiraPage() {
           </blockquote>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             <ButtonLink href="#">Comprar Donde aún respira tu nombre</ButtonLink>
-            <ButtonLink href="/downloads/donde-aun-respira-tu-nombre-muestra.pdf" variant="outline" download>
-              Descargar capítulo de muestra
-            </ButtonLink>
+            <ButtonLink href="/muestra-donde-aun-respira" variant="outline">
+              Leer muestra</ButtonLink>
           </div>
         </Reveal>
       </section>
