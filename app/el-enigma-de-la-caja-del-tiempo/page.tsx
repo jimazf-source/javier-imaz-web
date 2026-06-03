@@ -71,7 +71,7 @@ export default function EnigmaPage() {
             <figure className="mt-10 max-w-sm overflow-hidden border border-gold/20 bg-panel/40 p-2 shadow-2xl shadow-black/30">
               <Image
                 src="/assets/caja-del-tiempo-completa.png"
-                width={1538}
+                width={1537}
                 height={1023}
                 alt="La Caja del Tiempo completa con su reloj, símbolos y rubí"
                 className="h-auto w-full object-contain"
