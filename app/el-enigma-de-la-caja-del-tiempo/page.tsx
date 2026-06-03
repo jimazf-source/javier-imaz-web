@@ -85,6 +85,17 @@ export default function EnigmaPage() {
             </blockquote>
           </Reveal>
         </div>
+        <Reveal delay={140} className="mx-auto mt-16 max-w-5xl">
+          <figure className="overflow-hidden border border-gold/20 bg-panel/40 p-3 shadow-2xl shadow-black/30">
+            <Image
+              src="/assets/caja-del-tiempo-completa.png"
+              width={1538}
+              height={1023}
+              alt="La Caja del Tiempo completa con su reloj, símbolos y rubí"
+              className="h-auto w-full object-contain"
+            />
+          </figure>
+        </Reveal>
       </section>
 
       <section className="border-y border-parchment/10 bg-ink-soft px-5 py-20 sm:px-8 lg:py-28">
