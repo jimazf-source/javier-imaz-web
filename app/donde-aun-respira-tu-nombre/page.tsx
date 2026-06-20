@@ -42,6 +42,7 @@ const galeria = [
   { src: "/assets/donde-aun-respira-gallery/lamina-08.jpg", alt: "Lámina interior 08 de Donde aún respira tu nombre", title: "Lámina 08" },
   { src: "/assets/donde-aun-respira-gallery/lamina-09.jpg", alt: "Lámina interior 09 de Donde aún respira tu nombre", title: "Lámina 09" },
   { src: "/assets/donde-aun-respira-gallery/lamina-10.jpg", alt: "Lámina interior 10 de Donde aún respira tu nombre", title: "Lámina 10" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-11.jpg", alt: "Lámina interior 11 de Donde aún respira tu nombre", title: "Lámina 11" },
 ];
 
 const vimeoAccesses = [
