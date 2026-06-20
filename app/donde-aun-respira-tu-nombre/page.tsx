@@ -34,6 +34,21 @@ const galeria = [
   { src: "/assets/portada-donde-aun-respira-frontal.jpg", alt: "Portada de Donde aún respira tu nombre", title: "Portada" },
 ];
 
+const vimeoAccesses = [
+  {
+    title: "I. Donde aún respira tu nombre",
+    description:
+      "Primera pieza audiovisual del poemario: una entrada íntima al universo sonoro, visual y emocional de la obra.",
+    href: "https://vimeo.com/",
+  },
+  {
+    title: "II. El universo del poemario",
+    description:
+      "Segundo acceso en Vimeo para acompañar la lectura con imagen, música y la atmósfera poética del libro.",
+    href: "https://vimeo.com/",
+  },
+];
+
 export default function DondeAunRespiraPage() {
   return (
     <>
@@ -133,13 +148,30 @@ export default function DondeAunRespiraPage() {
       <section className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeading eyebrow="Vídeos del libro" title="Donde aún respira tu nombre en movimiento" description="Próximamente, piezas audiovisuales para entrar en el universo sonoro y visual del poemario." centered />
+            <SectionHeading eyebrow="Vídeos del libro" title="Donde aún respira tu nombre en movimiento" description="Dos accesos audiovisuales para entrar en el universo sonoro y visual del poemario desde Vimeo." centered />
           </Reveal>
-          <Reveal delay={90}>
-            <div className="mt-14 flex items-center justify-center border border-gold/20 bg-panel/45 p-20">
-              <p className="text-center font-display text-3xl italic text-parchment/50">Vídeos próximamente</p>
-            </div>
-          </Reveal>
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            {vimeoAccesses.map((video, index) => (
+              <Reveal key={video.title} delay={index * 90}>
+                <article className="flex h-full flex-col border border-gold/20 bg-panel/55 p-8 shadow-2xl shadow-black/20">
+                  <p className="literary-rule text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
+                    Vimeo
+                  </p>
+                  <h3 className="mt-7 font-display text-4xl leading-tight text-ivory">
+                    {video.title}
+                  </h3>
+                  <p className="mt-5 flex-1 text-sm leading-7 text-muted">
+                    {video.description}
+                  </p>
+                  <div className="mt-8">
+                    <ButtonLink href={video.href} external variant={index === 0 ? "gold" : "outline"}>
+                      Ver en Vimeo
+                    </ButtonLink>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -170,7 +202,7 @@ export default function DondeAunRespiraPage() {
         <Reveal className="mx-auto max-w-4xl">
           <p className="literary-rule mb-9 justify-center text-[.68rem] font-bold uppercase tracking-[.34em] text-gold-light">Frase destacada</p>
           <blockquote className="font-display text-[clamp(2.5rem,5vw,4.6rem)] italic leading-tight text-ivory">
-            "Hay amores que, aunque imposibles, se quedan para siempre donde importa: en la voz que se atreve a convertirlos en literatura."
+            &ldquo;Hay amores que, aunque imposibles, se quedan para siempre donde importa: en la voz que se atreve a convertirlos en literatura.&rdquo;
           </blockquote>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             <ButtonLink href="#">Comprar Donde aún respira tu nombre</ButtonLink>
