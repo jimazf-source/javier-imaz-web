@@ -32,6 +32,16 @@ const dimensiones = [
 
 const galeria = [
   { src: "/assets/portada-donde-aun-respira-frontal.jpg", alt: "Portada de Donde aún respira tu nombre", title: "Portada" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-01.jpg", alt: "Lámina interior 01 de Donde aún respira tu nombre", title: "Lámina 01" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-02.jpg", alt: "Lámina interior 02 de Donde aún respira tu nombre", title: "Lámina 02" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-03.jpg", alt: "Lámina interior 03 de Donde aún respira tu nombre", title: "Lámina 03" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-04.jpg", alt: "Lámina interior 04 de Donde aún respira tu nombre", title: "Lámina 04" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-05.jpg", alt: "Lámina interior 05 de Donde aún respira tu nombre", title: "Lámina 05" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-06.jpg", alt: "Lámina interior 06 de Donde aún respira tu nombre", title: "Lámina 06" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-07.jpg", alt: "Lámina interior 07 de Donde aún respira tu nombre", title: "Lámina 07" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-08.jpg", alt: "Lámina interior 08 de Donde aún respira tu nombre", title: "Lámina 08" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-09.jpg", alt: "Lámina interior 09 de Donde aún respira tu nombre", title: "Lámina 09" },
+  { src: "/assets/donde-aun-respira-gallery/lamina-10.jpg", alt: "Lámina interior 10 de Donde aún respira tu nombre", title: "Lámina 10" },
 ];
 
 const vimeoAccesses = [
@@ -178,13 +188,13 @@ export default function DondeAunRespiraPage() {
       <section className="border-y border-parchment/10 bg-ink-soft px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeading eyebrow="Galería del libro" title="Imágenes de Donde aún respira tu nombre" description="Portada, láminas interiores y materiales del poemario. La galería se irá completando." centered />
+            <SectionHeading eyebrow="Galería del libro" title="Imágenes de Donde aún respira tu nombre" description="Portada y láminas interiores del poemario: figuras solitarias, blancos habitados y el hilo rojo de la memoria." centered />
           </Reveal>
           <div className="mt-16 grid gap-6 lg:grid-cols-3">
             {galeria.map((item, index) => (
               <Reveal key={item.src} delay={index * 70}>
                 <figure className="group overflow-hidden border border-gold/20 bg-panel">
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[2/3] overflow-hidden bg-ivory">
                     <Image src={item.src} alt={item.alt} fill sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent opacity-80" />
                   </div>
