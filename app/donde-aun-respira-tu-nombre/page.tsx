@@ -50,13 +50,15 @@ const vimeoAccesses = [
     title: "I. El vértigo del amor",
     description:
       "Primera pieza audiovisual del poemario: una entrada íntima al universo sonoro, visual y emocional de la obra.",
-    href: "https://vimeo.com/1206848969?fl=ip&fe=ec",
+    embedUrl:
+      "https://player.vimeo.com/video/1206848969?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
   },
   {
     title: "II. Siempre juntos los dos",
     description:
       "Segundo acceso en Vimeo para acompañar la lectura con imagen, música y la atmósfera poética del libro.",
-    href: "https://vimeo.com/1206858779?share=copy&fl=sv&fe=ci",
+    embedUrl:
+      "https://player.vimeo.com/video/1206858779?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
   },
 ];
 
@@ -169,23 +171,34 @@ export default function DondeAunRespiraPage() {
           <Reveal>
             <SectionHeading eyebrow="Vídeos del libro" title="Donde aún respira tu nombre en movimiento" description="Dos accesos audiovisuales para entrar en el universo sonoro y visual del poemario desde Vimeo." centered />
           </Reveal>
-          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+          <div className="mt-14 space-y-8">
             {vimeoAccesses.map((video, index) => (
-              <Reveal key={video.title} delay={index * 90}>
-                <article className="flex h-full flex-col border border-gold/20 bg-panel/55 p-8 shadow-2xl shadow-black/20">
-                  <p className="literary-rule text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
-                    Vimeo
-                  </p>
-                  <h3 className="mt-7 font-display text-4xl leading-tight text-ivory">
-                    {video.title}
-                  </h3>
-                  <p className="mt-5 flex-1 text-sm leading-7 text-muted">
-                    {video.description}
-                  </p>
-                  <div className="mt-8">
-                    <ButtonLink href={video.href} external variant={index === 0 ? "gold" : "outline"}>
-                      Ver en Vimeo
-                    </ButtonLink>
+              <Reveal key={video.embedUrl} delay={index * 90}>
+                <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20 lg:grid lg:grid-cols-[minmax(0,1.45fr)_420px]">
+                  <div className="relative aspect-video bg-ink">
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      allow="fullscreen; picture-in-picture"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="border-t border-gold/15 p-7 lg:border-l lg:border-t-0 lg:p-8">
+                    <p className="literary-rule text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
+                      Corto audiovisual
+                    </p>
+                    <h3 className="mt-6 font-display text-4xl leading-tight text-ivory">
+                      {video.title}
+                    </h3>
+                    <p className="mt-5 text-sm leading-7 text-muted">
+                      {video.description}
+                    </p>
+                    <p className="mt-8 text-xs uppercase tracking-[.22em] text-gold-light/80">
+                      Reproducir en pantalla completa desde el propio vídeo
+                    </p>
                   </div>
                 </article>
               </Reveal>

@@ -57,6 +57,23 @@ const platformLinks = [
   },
 ];
 
+const vimeoVideos = [
+  {
+    title: "I. El vértigo del amor",
+    description:
+      "Primera pieza audiovisual del poemario: una entrada íntima al universo sonoro, visual y emocional de Donde aún respira tu nombre.",
+    embedUrl:
+      "https://player.vimeo.com/video/1206848969?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
+  },
+  {
+    title: "II. Siempre juntos los dos",
+    description:
+      "Segundo acceso audiovisual para acompañar la lectura con imagen, música y la atmósfera poética del libro.",
+    embedUrl:
+      "https://player.vimeo.com/video/1206858779?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
+  },
+];
+
 const directoryLinks = [
   {
     label: "Proyecto musical",
@@ -207,6 +224,53 @@ export default function ZamiReivajPage() {
                     {item.label}
                   </p>
                 </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8 lg:py-28">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Vídeos del poemario"
+              title="Donde aún respira tu nombre en movimiento"
+              description="Dos piezas audiovisuales para conectar el proyecto musical con el universo visual y emocional del libro."
+              centered
+            />
+          </Reveal>
+
+          <div className="mt-14 space-y-8">
+            {vimeoVideos.map((video, index) => (
+              <Reveal key={video.embedUrl} delay={index * 90}>
+                <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20 lg:grid lg:grid-cols-[minmax(0,1.45fr)_420px]">
+                  <div className="relative aspect-video bg-ink">
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      allow="fullscreen; picture-in-picture"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="border-t border-gold/15 p-7 lg:border-l lg:border-t-0 lg:p-8">
+                    <p className="literary-rule text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
+                      Corto audiovisual
+                    </p>
+                    <h3 className="mt-6 font-display text-4xl leading-tight text-ivory">
+                      {video.title}
+                    </h3>
+                    <p className="mt-5 text-sm leading-7 text-muted">
+                      {video.description}
+                    </p>
+                    <p className="mt-8 text-xs uppercase tracking-[.22em] text-gold-light/80">
+                      Reproducir en pantalla completa desde el propio vídeo
+                    </p>
+                  </div>
+                </article>
               </Reveal>
             ))}
           </div>
