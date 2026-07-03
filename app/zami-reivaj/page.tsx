@@ -58,19 +58,6 @@ const platformLinks = [
   },
 ];
 
-const directoryLinks = [
-  {
-    label: "Proyecto musical",
-    href: "/zami-reivaj",
-    text: "La página central de Zami Reivaj, los álbumes y las plataformas de escucha o compra.",
-  },
-  {
-    label: "Libros",
-    href: "/libros",
-    text: "El directorio literario con las obras publicadas y los proyectos en desarrollo.",
-  },
-];
-
 const albumPlan = [
   {
     number: "01",
@@ -317,42 +304,6 @@ export default function ZamiReivajPage() {
                   <div className="mt-7">
                     <ButtonLink href={platform.href} variant={platform.href.startsWith("#") ? "quiet" : "gold"}>
                       {platform.href.startsWith("#") ? "Pendiente" : "Abrir"}
-                    </ButtonLink>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-parchment/10 bg-ink-soft px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Directorio"
-              title="Accesos principales de la web"
-              description="En el menú de las tres rayas quedan visibles los accesos importantes para moverse entre el proyecto musical y los libros."
-              centered
-            />
-          </Reveal>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            {directoryLinks.map((item, index) => (
-              <Reveal key={item.href} delay={index * 80}>
-                <article className="flex h-full flex-col border border-gold/20 bg-panel p-8">
-                  <p className="text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
-                    Acceso web
-                  </p>
-                  <h3 className="mt-5 flex-1 font-display text-4xl leading-tight text-ivory">
-                    {item.label}
-                  </h3>
-                  <p className="mt-5 text-sm leading-7 text-muted">
-                    {item.text}
-                  </p>
-                  <div className="mt-8">
-                    <ButtonLink href={item.href} variant={index === 0 ? "gold" : "outline"}>
-                      Abrir
                     </ButtonLink>
                   </div>
                 </article>
