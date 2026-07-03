@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { dondeAunRespiraVideos } from "@/data/donde-aun-respira-videos";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -54,23 +55,6 @@ const platformLinks = [
     href: "/donde-aun-respira-tu-nombre",
     status: "Página del poemario",
     text: "Acceso al libro que origina el proyecto musical, visual y poético.",
-  },
-];
-
-const vimeoVideos = [
-  {
-    title: "I. El vértigo del amor",
-    description:
-      "Primera pieza audiovisual del poemario: una entrada íntima al universo sonoro, visual y emocional de Donde aún respira tu nombre.",
-    embedUrl:
-      "https://player.vimeo.com/video/1206848969?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
-  },
-  {
-    title: "II. Siempre juntos los dos",
-    description:
-      "Segundo acceso audiovisual para acompañar la lectura con imagen, música y la atmósfera poética del libro.",
-    embedUrl:
-      "https://player.vimeo.com/video/1206858779?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
   },
 ];
 
@@ -242,7 +226,7 @@ export default function ZamiReivajPage() {
           </Reveal>
 
           <div className="mt-14 space-y-8">
-            {vimeoVideos.map((video, index) => (
+            {dondeAunRespiraVideos.map((video, index) => (
               <Reveal key={video.embedUrl} delay={index * 90}>
                 <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20 lg:grid lg:grid-cols-[minmax(0,1.45fr)_420px]">
                   <div className="relative aspect-video bg-ink">

@@ -3,6 +3,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
+import { dondeAunRespiraVideos } from "@/data/donde-aun-respira-videos";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -43,23 +44,6 @@ const galeria = [
   { src: "/assets/donde-aun-respira-gallery/lamina-09.jpg", alt: "Lámina interior 09 de Donde aún respira tu nombre", title: "Lámina 09" },
   { src: "/assets/donde-aun-respira-gallery/lamina-10.jpg", alt: "Lámina interior 10 de Donde aún respira tu nombre", title: "Lámina 10" },
   { src: "/assets/donde-aun-respira-gallery/lamina-11.jpg", alt: "Lámina interior 11 de Donde aún respira tu nombre", title: "Lámina 11" },
-];
-
-const vimeoAccesses = [
-  {
-    title: "I. El vértigo del amor",
-    description:
-      "Primera pieza audiovisual del poemario: una entrada íntima al universo sonoro, visual y emocional de la obra.",
-    embedUrl:
-      "https://player.vimeo.com/video/1206848969?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
-  },
-  {
-    title: "II. Siempre juntos los dos",
-    description:
-      "Segundo acceso en Vimeo para acompañar la lectura con imagen, música y la atmósfera poética del libro.",
-    embedUrl:
-      "https://player.vimeo.com/video/1206858779?title=0&byline=0&portrait=0&badge=0&vimeo_logo=0&pip=0&dnt=1&autopause=0",
-  },
 ];
 
 export default function DondeAunRespiraPage() {
@@ -172,7 +156,7 @@ export default function DondeAunRespiraPage() {
             <SectionHeading eyebrow="Vídeos del libro" title="Donde aún respira tu nombre en movimiento" description="Dos accesos audiovisuales para entrar en el universo sonoro y visual del poemario desde Vimeo." centered />
           </Reveal>
           <div className="mt-14 space-y-8">
-            {vimeoAccesses.map((video, index) => (
+            {dondeAunRespiraVideos.map((video, index) => (
               <Reveal key={video.embedUrl} delay={index * 90}>
                 <article className="overflow-hidden border border-gold/20 bg-panel shadow-2xl shadow-black/20 lg:grid lg:grid-cols-[minmax(0,1.45fr)_420px]">
                   <div className="relative aspect-video bg-ink">
