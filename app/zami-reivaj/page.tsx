@@ -98,14 +98,6 @@ const albumPlan = [
   },
 ];
 
-const firstAlbumTracks = Array.from({ length: 11 }, (_, index) => {
-  const number = String(index + 1).padStart(2, "0");
-  return {
-    number,
-    title: `Canción ${number}`,
-  };
-});
-
 const universeStats = [
   { value: "52", label: "poemas" },
   { value: "52", label: "imágenes" },
@@ -154,7 +146,7 @@ export default function ZamiReivajPage() {
               52 poemas, 52 imágenes y 52 canciones conectadas mediante códigos QR a SoundCloud.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <ButtonLink href="#primer-album">Primer álbum</ButtonLink>
+              <ButtonLink href="#videos-poemario">Ver vídeos</ButtonLink>
               <ButtonLink href="/donde-aun-respira-tu-nombre" variant="outline">
                 Ver el libro
               </ButtonLink>
@@ -214,7 +206,7 @@ export default function ZamiReivajPage() {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:py-28">
+      <section id="videos-poemario" className="px-5 py-20 sm:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeading
@@ -254,50 +246,6 @@ export default function ZamiReivajPage() {
                       Reproducir en pantalla completa desde el propio vídeo
                     </p>
                   </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="primer-album" className="px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[420px_1fr]">
-          <Reveal>
-            <div className="sticky top-28">
-              <SectionHeading
-                eyebrow="Primer álbum"
-                title="Las primeras 11 canciones"
-                description="El primer álbum del ciclo ya está terminado y subido a DistroKid. Esta sección queda preparada para enlazar las plataformas oficiales cuando estén disponibles."
-              />
-              <div className="mt-9 border border-gold/20 bg-panel p-7">
-                <p className="text-[.68rem] font-bold uppercase tracking-[.28em] text-gold-light">
-                  Estado
-                </p>
-                <p className="mt-4 font-display text-3xl text-ivory">
-                  Álbum 1 completado
-                </p>
-                <p className="mt-4 text-sm leading-7 text-muted">
-                  Once canciones como primera entrega del universo musical de Donde aún respira tu nombre.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
-          <div className="grid gap-4">
-            {firstAlbumTracks.map((track, index) => (
-              <Reveal key={track.number} delay={index * 45}>
-                <article className="grid gap-5 border border-parchment/10 bg-panel/45 p-6 sm:grid-cols-[90px_1fr_auto] sm:items-center">
-                  <p className="font-display text-4xl text-gold-light">{track.number}</p>
-                  <div>
-                    <h3 className="font-display text-3xl text-ivory">{track.title}</h3>
-                    <p className="mt-2 text-sm leading-7 text-muted">
-                      Título pendiente de confirmar para publicación web.
-                    </p>
-                  </div>
-                  <span className="rounded-full border border-gold/25 px-4 py-2 text-xs font-semibold uppercase tracking-[.18em] text-gold-light">
-                    Álbum 1
-                  </span>
                 </article>
               </Reveal>
             ))}
