@@ -47,16 +47,16 @@ const galeria = [
 
 const vimeoAccesses = [
   {
-    title: "I. Donde aún respira tu nombre",
+    title: "I. El vértigo del amor",
     description:
       "Primera pieza audiovisual del poemario: una entrada íntima al universo sonoro, visual y emocional de la obra.",
-    href: "https://vimeo.com/",
+    href: "https://vimeo.com/1206848969?fl=ip&fe=ec",
   },
   {
-    title: "II. El universo del poemario",
+    title: "II. Siempre juntos los dos",
     description:
       "Segundo acceso en Vimeo para acompañar la lectura con imagen, música y la atmósfera poética del libro.",
-    href: "https://vimeo.com/",
+    href: "https://vimeo.com/1206858779?share=copy&fl=sv&fe=ci",
   },
 ];
 
