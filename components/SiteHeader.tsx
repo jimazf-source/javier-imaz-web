@@ -39,7 +39,7 @@ export function SiteHeader() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="flex items-center gap-2"
+          className="flex min-w-0 items-center gap-2"
           aria-label="Zami Reivaj, inicio"
         >
           <Image
@@ -47,10 +47,10 @@ export function SiteHeader() {
             alt=""
             width={58}
             height={46}
-            className="h-auto w-14 object-contain drop-shadow-[0_4px_12px_rgba(194,151,74,.2)]"
+            className="h-auto w-12 object-contain drop-shadow-[0_4px_12px_rgba(194,151,74,.2)] sm:w-14"
             style={{ height: "auto" }}
           />
-          <span className="font-display text-[1.42rem] tracking-[.025em] text-ivory">
+          <span className="truncate font-display text-[1.18rem] tracking-[.025em] text-ivory sm:text-[1.42rem]">
             Zami <span className="text-gold-light">Reivaj</span>
           </span>
         </Link>
@@ -97,8 +97,8 @@ export function SiteHeader() {
       </nav>
 
       <div
-        className={`fixed inset-0 top-20 flex flex-col items-center justify-center gap-7 bg-ink px-6 transition duration-300 xl:hidden ${
-          open ? "visible opacity-100" : "invisible opacity-0"
+        className={`fixed right-0 top-20 z-40 flex h-[calc(100dvh-5rem)] w-[82vw] max-w-[21rem] flex-col items-stretch gap-2 overflow-y-auto border-l border-gold/20 bg-[#070c12] px-6 py-7 text-left shadow-2xl shadow-black/60 transition duration-300 xl:hidden ${
+          open ? "visible translate-x-0 opacity-100" : "invisible translate-x-full opacity-0"
         }`}
       >
         {navigation.map((item) => (
@@ -106,7 +106,7 @@ export function SiteHeader() {
             key={item.href}
             href={item.href}
             onClick={() => setOpen(false)}
-            className={`font-display text-3xl ${
+            className={`block w-full border-b border-parchment/10 py-3 text-left text-[0.98rem] font-semibold tracking-wide transition hover:text-gold-light ${
               pathname === item.href ? "text-gold-light" : "text-ivory"
             }`}
           >

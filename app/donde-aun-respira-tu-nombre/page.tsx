@@ -71,6 +71,9 @@ export default function DondeAunRespiraPage() {
       >
         <div className="mt-10 flex flex-wrap gap-4">
           <ButtonLink href="#">Comprar libro</ButtonLink>
+          <ButtonLink href="/zami-reivaj" variant="outline">
+            Proyecto musical
+          </ButtonLink>
           <ButtonLink href="/muestra-donde-aun-respira" variant="outline">
             Leer muestra
           </ButtonLink>
@@ -151,6 +154,11 @@ export default function DondeAunRespiraPage() {
             <div className="mt-14 border border-gold/20 bg-panel p-10 text-center">
               <p className="text-[.68rem] font-bold uppercase tracking-[.32em] text-gold-light">Autoría total</p>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-9 text-parchment">Las tres dimensiones de la obra —escritura, pintura y composición— son obra del propio Javier Imaz Fandos. Palabra, imagen y sonido nacen de una sola voz y convergen en un único universo poético.</p>
+              <div className="mt-8">
+                <ButtonLink href="/zami-reivaj">
+                  Entrar en el proyecto musical
+                </ButtonLink>
+              </div>
             </div>
           </Reveal>
         </div>

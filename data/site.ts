@@ -246,8 +246,8 @@ export const journalEntries = [
 export const navigation = [
   { label: "Inicio", href: "/" },
   { label: "Libros", href: "/libros" },
+  { label: "Proyecto musical", href: "/zami-reivaj" },
   { label: "Lágrimas Errantes", href: "/lagrimas-errantes" },
-  { label: "El Enigma", href: "/el-enigma-de-la-caja-del-tiempo" },
   { label: "Autor", href: "/autor" },
   { label: "Bitácora", href: "/bitacora" },
   { label: "Noticias", href: "/noticias" },
