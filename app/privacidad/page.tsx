@@ -46,7 +46,7 @@ const legalGroups: LegalGroup[] = [
               "Titular: Javier Imaz Fandos",
               "NIF: 17863792Z",
               "Nombre artístico o proyecto creativo: Lágrimas Errantes / Zami Reivaj",
-              "Domicilio a efectos legales: pendiente de completar",
+              "Domicilio a efectos legales: C/ Maestro Marquina 14-16 local, 50006 Zaragoza.",
               `Correo electrónico de contacto: ${contactEmail}`,
               "Sitio web: www.lagrimaserrantes.com",
             ],
@@ -149,7 +149,7 @@ const legalGroups: LegalGroup[] = [
             lines: [
               "Responsable: Javier Imaz Fandos",
               "NIF: 17863792Z",
-              "Domicilio a efectos legales: pendiente de completar",
+              "Domicilio a efectos legales: C/ Maestro Marquina 14-16 local, 50006 Zaragoza.",
               `Correo electrónico: ${contactEmail}`,
             ],
           },
