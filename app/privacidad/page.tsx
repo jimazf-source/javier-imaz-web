@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata = createMetadata({
   title: "Privacidad",
   description:
-    "Política de privacidad, comunicaciones comerciales, cookies y devoluciones de la web.",
+    "Aviso legal, política de privacidad, cookies y condiciones de compra de Lágrimas Errantes.",
   path: "/privacidad",
 });
 
@@ -22,231 +22,302 @@ type LegalSection = {
 type LegalGroup = {
   eyebrow: string;
   title: string;
-  intro: string;
+  intro?: string;
   sections: LegalSection[];
 };
 
+const contactEmail = "jimazf@me.com";
+
 const legalGroups: LegalGroup[] = [
   {
-    eyebrow: "RGPD",
-    title: "Política de privacidad",
-    intro:
-      "De conformidad con el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), se informa a los usuarios de este sitio web del tratamiento de sus datos personales conforme a lo siguiente:",
+    eyebrow: "Aviso legal",
+    title: "Aviso legal y condiciones de uso",
     sections: [
       {
-        title: "1. Responsable del tratamiento",
+        title: "1.1. Titularidad del sitio web",
         blocks: [
+          {
+            kind: "paragraph",
+            text: "En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico, se informa de que el sitio web www.lagrimaserrantes.com es titularidad de:",
+          },
           {
             kind: "address",
             lines: [
-              "Razón social: Instituto Aragonés de Osteopatía, S.L.",
-              "NIF/CIF: B50862127",
-              "Dirección: Calle Maestro Marquina, 14-16 local, 50006 Zaragoza",
-              "Correo electrónico de contacto: protecciondedatos@institutosteopatia.com",
-              "Correo general: osteopatia@institutosteopatia.com",
+              "Titular: Javier Imaz Fandos",
+              "NIF: 17863792Z",
+              "Nombre artístico o proyecto creativo: Lágrimas Errantes / Zami Reivaj",
+              "Domicilio a efectos legales: pendiente de completar",
+              `Correo electrónico de contacto: ${contactEmail}`,
+              "Sitio web: www.lagrimaserrantes.com",
             ],
           },
         ],
       },
       {
-        title: "2. Ámbito sanitario y formativo",
+        title: "1.2. Objeto de la web",
         blocks: [
           {
             kind: "paragraph",
-            text: "El Instituto Aragonés de Osteopatía desarrolla actividades sanitarias y formativas. En el marco de la actividad sanitaria, los datos personales tratados pueden incluir, en determinados casos, datos relativos a la salud, considerados categorías especiales de datos conforme al artículo 9 del RGPD.",
+            text: "www.lagrimaserrantes.com es una web de autor destinada a presentar y difundir obras literarias, proyectos editoriales, contenidos creativos, noticias, eventos, presentaciones, materiales relacionados con el universo literario Lágrimas Errantes y, en su caso, proyectos musicales vinculados a dichas obras.",
+          },
+          {
+            kind: "paragraph",
+            text: "El sitio puede incluir información sobre novelas, poesía, ensayos, canciones, álbumes, material audiovisual, enlaces de compra o escucha en plataformas externas, formularios de contacto, suscripción a boletines informativos y contenidos de carácter cultural o promocional.",
           },
         ],
       },
       {
-        title: "3. Datos personales objeto de tratamiento",
+        title: "1.3. Uso del sitio web",
         blocks: [
           {
             kind: "paragraph",
-            text: "A través del sitio web, formularios y demás canales de contacto, se podrán recabar los siguientes datos personales:",
+            text: "El acceso y uso del sitio web atribuye la condición de usuario e implica la aceptación de las presentes condiciones. El usuario se compromete a utilizar la web de forma lícita, diligente y respetuosa con los derechos de terceros, la propiedad intelectual, la imagen del autor y la normativa aplicable.",
           },
           {
-            kind: "list",
-            items: [
-              "Datos identificativos: nombre y apellidos.",
-              "Datos de contacto: correo electrónico, teléfono.",
-              "Datos de navegación: dirección IP, tipo de navegador, dispositivo y datos analíticos.",
-              "Datos académicos o profesionales, en caso de solicitudes de información, inscripción o relación formativa.",
-              "Datos de salud, exclusivamente cuando sea necesario para la prestación de servicios sanitarios.",
-            ],
+            kind: "paragraph",
+            text: "Queda prohibido utilizar la web para finalidades ilícitas, lesivas, fraudulentas, ofensivas, contrarias a la buena fe o que puedan dañar, inutilizar o sobrecargar el funcionamiento del sitio.",
           },
         ],
       },
       {
-        title: "4. Finalidades del tratamiento y base jurídica",
+        title: "1.4. Enlaces a terceros",
         blocks: [
           {
             kind: "paragraph",
-            text: "Los datos personales facilitados por los interesados serán tratados con las siguientes finalidades y conforme a las bases legales indicadas:",
+            text: "La web puede incluir enlaces a plataformas de venta, editoriales, distribuidoras, librerías, servicios musicales, redes sociales, plataformas de streaming, plataformas de vídeo, pasarelas de pago o páginas de terceros. Estos enlaces se ofrecen para facilitar el acceso a contenidos, compras, escucha musical, descargas, reservas o información complementaria.",
           },
           {
-            kind: "list",
-            items: [
-              "Atender consultas o solicitudes de información: consentimiento del interesado (art. 6.1.a RGPD).",
-              "Gestión administrativa, académica o comercial: ejecución de un contrato o aplicación de medidas precontractuales (art. 6.1.b RGPD).",
-              "Gestión sanitaria y atención clínica: ejecución de un contrato y cumplimiento de obligaciones legales (art. 6.1.b y c RGPD).",
-              "Tratamiento de datos de salud: prestación de asistencia sanitaria (art. 9.2.h RGPD).",
-              "Envío de comunicaciones informativas o comerciales relacionadas con productos, servicios, actividades o promociones: consentimiento del interesado (art. 6.1.a RGPD).",
-              "Elaboración de perfiles comerciales básicos, basados en la información facilitada por el propio interesado, con el fin de ofrecer contenidos y servicios de su interés. En ningún caso se adoptarán decisiones automatizadas basadas en dichos perfiles.",
-              "Cumplimiento de obligaciones legales, sanitarias, fiscales o administrativas: cumplimiento de una obligación legal (art. 6.1.c RGPD).",
-              "Mejora de la experiencia de usuario y análisis estadístico del uso del sitio web: interés legítimo del responsable (art. 6.1.f RGPD).",
-            ],
+            kind: "paragraph",
+            text: "Cuando el usuario acceda a una plataforma externa, quedará sujeto a las condiciones legales, políticas de privacidad, cookies, compra, devolución y contratación de dicha plataforma. Lágrimas Errantes no controla ni asume responsabilidad por el contenido, funcionamiento, disponibilidad, políticas o prácticas de privacidad de sitios web ajenos.",
           },
         ],
       },
       {
-        title: "5. Plazo de conservación de los datos",
+        title: "1.5. Propiedad intelectual e industrial",
         blocks: [
           {
             kind: "paragraph",
-            text: "Los datos personales se conservarán conforme a los siguientes criterios:",
+            text: "Todos los contenidos de la web, incluyendo textos, fragmentos literarios, títulos, nombres de obras, sinopsis, poemas, comentarios, imágenes, fotografías, ilustraciones, diseños, logotipos, composiciones musicales, vídeos, estructura, selección de contenidos y elementos gráficos, están protegidos por derechos de propiedad intelectual e industrial.",
           },
           {
-            kind: "list",
-            items: [
-              "Datos sanitarios e historias clínicas: durante los plazos establecidos por la normativa sanitaria estatal y autonómica aplicable.",
-              "Datos académicos y formativos: mientras se mantenga la relación formativa y durante los plazos legales posteriores exigidos.",
-              "Datos comerciales: mientras no se revoque el consentimiento otorgado.",
-              "Resto de datos personales: mientras se mantenga la relación contractual, académica o mercantil, y durante los plazos exigidos por la normativa fiscal, contable o administrativa.",
-            ],
+            kind: "paragraph",
+            text: "Salvo autorización expresa por escrito, queda prohibida la reproducción, distribución, comunicación pública, transformación, extracción, reutilización o explotación de los contenidos de la web, total o parcialmente, con fines comerciales o no comerciales.",
+          },
+          {
+            kind: "paragraph",
+            text: "Se permite compartir enlaces públicos a la web siempre que no se altere el contenido, no se atribuya falsamente la autoría y no se perjudique la imagen del proyecto o del autor.",
           },
         ],
       },
       {
-        title: "6. Destinatarios de los datos",
+        title: "1.6. Responsabilidad",
         blocks: [
           {
             kind: "paragraph",
-            text: "Los datos personales no se cederán a terceros, salvo obligación legal o cuando sea necesario para la correcta prestación de los servicios (proveedores tecnológicos, servicios de alojamiento web, plataformas de gestión). Asimismo, podrán comunicarse a empresas del mismo grupo exclusivamente para fines administrativos internos.",
+            text: "El titular procurará mantener la web actualizada, accesible y libre de errores técnicos, pero no garantiza la disponibilidad continua del sitio ni la inexistencia de interrupciones, fallos, errores de conexión, mantenimiento, incidencias de hosting o problemas derivados de terceros.",
+          },
+          {
+            kind: "paragraph",
+            text: "La información incluida en la web tiene carácter cultural, literario, informativo o promocional. No constituye asesoramiento profesional, sanitario, legal, financiero ni de ningún otro tipo.",
           },
         ],
       },
       {
-        title: "7. Transferencias internacionales de datos",
+        title: "1.7. Legislación aplicable",
         blocks: [
           {
             kind: "paragraph",
-            text: "Con carácter general, no se realizan transferencias internacionales de datos. En caso de utilizar servicios de terceros ubicados fuera del Espacio Económico Europeo, se adoptarán las garantías adecuadas conforme a los artículos 44 y siguientes del RGPD.",
-          },
-        ],
-      },
-      {
-        title: "8. Derechos de las personas interesadas",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "Las personas interesadas tienen derecho a:",
-          },
-          {
-            kind: "list",
-            items: [
-              "Acceder a sus datos personales.",
-              "Solicitar la rectificación de los datos inexactos.",
-              "Solicitar la supresión de sus datos cuando ya no sean necesarios para los fines recogidos.",
-              "Oponerse al tratamiento de sus datos en determinadas circunstancias.",
-              "Solicitar la limitación del tratamiento.",
-              "Solicitar la portabilidad de sus datos.",
-              "Retirar el consentimiento prestado en cualquier momento, sin efectos retroactivos.",
-            ],
-          },
-          {
-            kind: "paragraph",
-            text: "Para el ejercicio de estos derechos, el interesado deberá dirigir una solicitud al correo electrónico protecciondedatos@institutosteopatia.com, adjuntando copia de un documento que acredite su identidad.",
-          },
-        ],
-      },
-      {
-        title: "9. Medidas de seguridad",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "El responsable del tratamiento aplica las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos personales y evitar su pérdida, alteración, acceso no autorizado o divulgación indebida, atendiendo al estado de la técnica, la naturaleza de los datos tratados y los riesgos existentes.",
-          },
-        ],
-      },
-      {
-        title: "10. Autoridad de control",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "En caso de considerar que el tratamiento de sus datos personales no se ajusta a la normativa vigente, el interesado puede presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD): www.aepd.es.",
+            text: "Las presentes condiciones se rigen por la legislación española y, en particular, por la normativa aplicable en materia de servicios de la sociedad de la información, protección de datos, consumidores y usuarios, propiedad intelectual y comercio electrónico.",
           },
         ],
       },
     ],
   },
   {
-    eyebrow: "LSSI-CE",
-    title: "Política de comunicaciones comerciales",
-    intro:
-      "De conformidad con el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de lo siguiente:",
+    eyebrow: "Privacidad",
+    title: "Política de privacidad",
     sections: [
       {
-        title: "1. Tratamiento de los datos",
+        title: "2.1. Responsable del tratamiento",
         blocks: [
           {
             kind: "paragraph",
-            text: "Los datos personales utilizados para el envío de comunicaciones comerciales son tratados por Instituto Aragonés de Osteopatía, S.L. y han sido recabados con el consentimiento expreso del interesado, con la finalidad de informar sobre servicios, actividades, campañas, promociones o para dar respuesta a solicitudes realizadas por el propio interesado.",
-          },
-        ],
-      },
-      {
-        title: "2. Naturaleza de las comunicaciones",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "Las comunicaciones enviadas tienen carácter informativo y/o comercial y se remiten únicamente a aquellos destinatarios que han otorgado su autorización previa. Dichas comunicaciones están dirigidas exclusivamente a su destinatario y pueden contener información de carácter confidencial o privilegiado.",
-          },
-          {
-            kind: "paragraph",
-            text: "Queda prohibida cualquier modificación, retransmisión, difusión u otro uso de la información contenida en estas comunicaciones por personas o entidades distintas de su destinatario, salvo autorización expresa del Instituto Aragonés de Osteopatía. En caso de haber recibido el mensaje por error, se ruega proceder a su eliminación inmediata y abstenerse de su lectura o del acceso a los archivos adjuntos.",
-          },
-          {
-            kind: "paragraph",
-            text: "El correo electrónico a través de Internet no permite garantizar plenamente la confidencialidad, integridad o correcta recepción de los mensajes, por lo que el Instituto Aragonés de Osteopatía no asume responsabilidad por estas circunstancias.",
-          },
-        ],
-      },
-      {
-        title: "3. Derecho de oposición y baja de comunicaciones",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "El destinatario podrá oponerse en cualquier momento al tratamiento de sus datos con fines promocionales o comerciales solicitando la baja del servicio mediante el envío de un correo electrónico a osteopatia@institutosteopatia.com, indicando en el asunto del mensaje \"Baja comunicación\".",
-          },
-        ],
-      },
-      {
-        title: "4. Ejercicio de derechos RGPD",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "Asimismo, el destinatario podrá ejercer gratuitamente los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad de los datos, así como revocar el consentimiento otorgado en cualquier momento, sin efectos retroactivos.",
-          },
-          {
-            kind: "paragraph",
-            text: "Para el ejercicio de estos derechos, deberá dirigir una solicitud al correo electrónico protecciondedatos@institutosteopatia.com, o bien mediante escrito firmado dirigido a:",
+            text: "El responsable del tratamiento de los datos personales recogidos a través de www.lagrimaserrantes.com es:",
           },
           {
             kind: "address",
             lines: [
-              "Instituto Aragonés de Osteopatía, S.L.",
-              "C/ Maestro Marquina 14-16 local",
-              "50006 Zaragoza",
+              "Responsable: Javier Imaz Fandos",
+              "NIF: 17863792Z",
+              "Domicilio a efectos legales: pendiente de completar",
+              `Correo electrónico: ${contactEmail}`,
+            ],
+          },
+          {
+            kind: "paragraph",
+            text: "Esta política se aplica a los datos personales tratados a través de la web, formularios de contacto, suscripción a newsletter, comunicaciones electrónicas y, en su caso, venta directa o preventa gestionada por el propio titular.",
+          },
+        ],
+      },
+      {
+        title: "2.2. Datos personales tratados",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Según el uso que el usuario realice de la web, podrán tratarse las siguientes categorías de datos:",
+          },
+          {
+            kind: "list",
+            items: [
+              "Datos identificativos: nombre, apellidos o nombre con el que el usuario se identifique.",
+              "Datos de contacto: correo electrónico, teléfono si se facilita voluntariamente y dirección postal en caso de compras, envíos, preventas o solicitudes concretas.",
+              "Datos de navegación: dirección IP, identificadores técnicos, dispositivo, navegador, sistema operativo, páginas visitadas, fecha y hora de acceso y datos analíticos.",
+              "Datos relativos a consultas: contenido del mensaje enviado por el usuario mediante formularios, correo electrónico o redes sociales.",
+              "Datos comerciales o transaccionales: productos solicitados, pedidos, justificantes de compra, datos de facturación y datos necesarios para gestionar envíos o incidencias, únicamente si se realiza venta directa desde la web o por canales propios.",
+              "Datos de preferencias: interés en libros, lanzamientos, presentaciones, newsletter, preventas, material musical o contenidos del universo creativo.",
+            ],
+          },
+          {
+            kind: "paragraph",
+            text: "No se solicitan ni se tratan de forma intencionada datos especialmente protegidos, como datos de salud, ideología, religión, origen racial, orientación sexual, afiliación sindical o datos biométricos. El usuario debe evitar incluir este tipo de información en formularios o mensajes.",
+          },
+        ],
+      },
+      {
+        title: "2.3. Finalidades del tratamiento",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Los datos personales podrán tratarse para las siguientes finalidades:",
+          },
+          {
+            kind: "list",
+            items: [
+              "Atender consultas, solicitudes, propuestas, mensajes de lectores, colaboraciones, entrevistas, eventos o comunicaciones enviadas por el usuario.",
+              "Gestionar la suscripción a la newsletter o boletín de novedades, incluyendo noticias editoriales, publicaciones, presentaciones, lanzamientos, preventas, nuevos fragmentos, canciones, álbumes o contenidos relacionados con el proyecto Lágrimas Errantes.",
+              "Gestionar compras, reservas, preventas, envíos, facturación, devoluciones o incidencias cuando la operación sea realizada directamente por el titular.",
+              "Redirigir al usuario a plataformas externas de compra, distribución, streaming, redes sociales o servicios de terceros.",
+              "Mejorar la web, analizar el uso del sitio, medir audiencia, rendimiento, seguridad y navegación.",
+              "Cumplir obligaciones legales, fiscales, contables, administrativas o de protección de consumidores cuando resulten aplicables.",
+              "Proteger los derechos de propiedad intelectual, prevenir usos indebidos del sitio y mantener la seguridad de la web.",
             ],
           },
         ],
       },
       {
-        title: "5. Base legal del tratamiento",
+        title: "2.4. Base jurídica",
         blocks: [
           {
             kind: "paragraph",
-            text: "La base legal para el tratamiento de los datos personales con fines comerciales es el consentimiento del interesado, conforme al artículo 6.1.a del RGPD.",
+            text: "Las bases jurídicas que legitiman el tratamiento son:",
+          },
+          {
+            kind: "list",
+            items: [
+              "Consentimiento del usuario: para responder a consultas, gestionar la suscripción a newsletter, enviar comunicaciones comerciales o instalar cookies no necesarias.",
+              "Ejecución de contrato o aplicación de medidas precontractuales: cuando el usuario solicita una compra, reserva, preventa, envío, descarga, contratación o gestión relacionada con un producto o servicio.",
+              "Cumplimiento de obligaciones legales: cuando sea necesario conservar facturas, responder a requerimientos legales o atender obligaciones fiscales, contables, administrativas o de consumo.",
+              "Interés legítimo: para mantener la seguridad de la web, prevenir abusos, conservar comunicaciones necesarias para la defensa de derechos, mejorar el funcionamiento del sitio y realizar analítica básica siempre que no prevalezcan los derechos del usuario.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "2.5. Newsletter y comunicaciones comerciales",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "El usuario podrá suscribirse voluntariamente para recibir comunicaciones relacionadas con novedades editoriales, publicaciones, presentaciones, lanzamientos, preventas, contenidos literarios, poesía, música, noticias del proyecto y otros contenidos vinculados a Lágrimas Errantes.",
+          },
+          {
+            kind: "paragraph",
+            text: "La suscripción se basará en el consentimiento del usuario. El usuario podrá darse de baja en cualquier momento mediante el enlace incluido en cada comunicación o escribiendo al correo de contacto indicado en esta política.",
+          },
+        ],
+      },
+      {
+        title: "2.6. Venta directa, enlaces externos y plataformas de terceros",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Cuando la compra, reserva, escucha, descarga o contratación se realice a través de editoriales, distribuidoras, librerías, plataformas musicales, redes sociales, marketplaces o pasarelas externas, dichas entidades serán responsables de sus propios tratamientos de datos. En esos casos se aplicarán sus políticas de privacidad, cookies, compra y devolución.",
+          },
+          {
+            kind: "paragraph",
+            text: "Cuando una venta se realice directamente a través de Lágrimas Errantes o del titular, se tratarán únicamente los datos necesarios para gestionar la operación, entrega, comunicación, facturación, soporte y cumplimiento de obligaciones legales.",
+          },
+        ],
+      },
+      {
+        title: "2.7. Destinatarios de los datos",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Los datos no se cederán a terceros salvo obligación legal, consentimiento del usuario o cuando sea necesario para prestar el servicio solicitado. Podrán tener acceso a los datos, en calidad de encargados o prestadores de servicios, proveedores tecnológicos y profesionales como:",
+          },
+          {
+            kind: "list",
+            items: [
+              "Servicios de alojamiento web, mantenimiento, seguridad y despliegue de la web.",
+              "Plataformas de email marketing o newsletter, como Brevo u otras equivalentes.",
+              "Herramientas de analítica web, si se instalan y se aceptan las cookies correspondientes.",
+              "Servicios de pago, mensajería, transporte, imprenta, distribuidoras, plataformas de venta o proveedores necesarios para gestionar pedidos directos.",
+              "Asesores fiscales, contables, legales o administrativos cuando sea necesario.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "2.8. Transferencias internacionales",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Algunos proveedores tecnológicos, de analítica, email marketing, redes sociales, streaming musical, alojamiento, distribución o venta pueden estar ubicados fuera del Espacio Económico Europeo o tratar datos mediante infraestructuras internacionales. En tales casos se procurará trabajar con proveedores que ofrezcan garantías adecuadas conforme al RGPD, como cláusulas contractuales tipo, decisiones de adecuación u otros mecanismos legalmente previstos.",
+          },
+        ],
+      },
+      {
+        title: "2.9. Plazo de conservación",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Los datos se conservarán durante el tiempo necesario para cumplir la finalidad para la que fueron recogidos y, posteriormente, durante los plazos legales aplicables:",
+          },
+          {
+            kind: "list",
+            items: [
+              "Consultas y mensajes: durante el tiempo necesario para atender la solicitud y conservar prueba de la comunicación si fuera necesario.",
+              "Newsletter: hasta que el usuario solicite la baja o retire su consentimiento.",
+              "Datos de compras, pedidos, facturación o preventas: durante la relación contractual y los plazos fiscales, contables, administrativos o de consumo aplicables.",
+              "Datos de navegación y cookies: según la duración indicada en la política de cookies y en el panel de configuración correspondiente.",
+              "Datos necesarios para la defensa de derechos: durante los plazos de prescripción de acciones legales que resulten aplicables.",
+            ],
+          },
+        ],
+      },
+      {
+        title: "2.10. Derechos del usuario",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "El usuario puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento, portabilidad y retirada del consentimiento en cualquier momento.",
+          },
+          {
+            kind: "paragraph",
+            text: `Para ejercer estos derechos, deberá enviar una solicitud al correo ${contactEmail}, indicando el derecho que desea ejercer y acreditando su identidad cuando sea necesario.`,
+          },
+          {
+            kind: "paragraph",
+            text: "El usuario también puede presentar una reclamación ante la Agencia Española de Protección de Datos si considera que el tratamiento de sus datos no se ajusta a la normativa vigente.",
+          },
+        ],
+      },
+      {
+        title: "2.11. Seguridad",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "El titular aplicará medidas técnicas y organizativas razonables para proteger los datos personales frente a pérdida, acceso no autorizado, alteración, divulgación indebida o uso no autorizado, teniendo en cuenta la naturaleza de los datos, el estado de la técnica y los riesgos existentes.",
           },
         ],
       },
@@ -255,219 +326,180 @@ const legalGroups: LegalGroup[] = [
   {
     eyebrow: "Cookies",
     title: "Política de cookies",
-    intro:
-      "De conformidad con el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD) y la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios sobre el uso de cookies en este sitio web.",
     sections: [
       {
-        title: "1. ¿Qué son las cookies?",
+        title: "3.1. Qué son las cookies",
         blocks: [
           {
             kind: "paragraph",
-            text: "Las cookies son pequeños archivos de texto que se descargan y almacenan en el dispositivo del usuario (ordenador, smartphone, tableta u otro dispositivo electrónico) cuando visita determinadas páginas web. Su finalidad puede ser muy diversa, como almacenar preferencias de navegación, recopilar información estadística, permitir determinadas funcionalidades técnicas o facilitar la interacción con el sitio web.",
-          },
-          {
-            kind: "paragraph",
-            text: "En algunos casos, las cookies pueden llegar a reconocer al usuario o a su dispositivo, especialmente cuando se combinan con otra información, siempre de acuerdo con la normativa vigente.",
+            text: "Las cookies son pequeños archivos que se descargan en el dispositivo del usuario cuando accede a determinadas páginas web. Permiten recordar preferencias, garantizar el funcionamiento técnico de la web, medir la navegación o integrar servicios de terceros.",
           },
         ],
       },
       {
-        title: "2. ¿Por qué son útiles las cookies?",
+        title: "3.2. Cookies que puede utilizar esta web",
         blocks: [
           {
             kind: "paragraph",
-            text: "Desde el punto de vista del usuario, las cookies permiten una navegación más ágil y personalizada, recordando preferencias como el idioma o determinadas configuraciones. Desde el punto de vista del titular del sitio web, permiten mejorar los servicios ofrecidos y analizar el uso que los usuarios hacen del sitio web con fines estadísticos y de mejora continua.",
-          },
-        ],
-      },
-      {
-        title: "3. Tipos de cookies utilizadas",
-        blocks: [
-          {
-            kind: "paragraph",
-            text: "Este sitio web utiliza cookies propias y de terceros. En función de su finalidad, se emplean los siguientes tipos de cookies:",
+            text: "www.lagrimaserrantes.com puede utilizar las siguientes categorías de cookies o tecnologías similares:",
           },
           {
             kind: "list",
             items: [
-              "Cookies técnicas o necesarias: permiten la navegación por el sitio web y el uso de las diferentes opciones o servicios que ofrece. Son imprescindibles para el correcto funcionamiento de la web.",
-              "Cookies de personalización o mejora del rendimiento: permiten recordar información para que el usuario acceda al servicio con determinadas características, como el idioma, el tipo de navegador o configuraciones previamente seleccionadas.",
-              "Cookies de análisis o estadísticas: bien tratadas por el titular del sitio web o por terceros, permiten cuantificar el número de usuarios y analizar de forma estadística la utilización del sitio web, con el fin de mejorar los contenidos y servicios ofrecidos.",
-              "Cookies de geolocalización: permiten conocer de forma aproximada y anónima la ubicación del dispositivo desde el que se accede al sitio web, con el fin de ofrecer contenidos o servicios adaptados territorialmente.",
-              "Cookies de registro: se generan cuando el usuario se registra o inicia sesión en el sitio web, y permiten identificarlo mientras dure la sesión o hasta que cierre el navegador.",
-              "Cookies publicitarias: permiten gestionar de la forma más eficaz posible los espacios publicitarios del sitio web, adecuando el contenido del anuncio al servicio solicitado o al uso que el usuario realice del sitio web.",
-              "Cookies de terceros: en algunas páginas pueden instalarse cookies de terceros, como servicios de análisis (por ejemplo, Google Analytics) o redes sociales, que permiten compartir contenidos o analizar la navegación.",
+              "Cookies técnicas o necesarias: imprescindibles para la navegación, seguridad, funcionamiento de formularios, carga de páginas y mantenimiento del sitio.",
+              "Cookies de preferencias: permiten recordar opciones del usuario, como configuración o preferencias de navegación, cuando se activen.",
+              "Cookies de análisis o medición: permiten conocer de forma agregada cómo se utiliza la web, qué páginas se visitan y cómo mejorar el contenido.",
+              "Cookies de terceros: pueden instalarse al integrar servicios como newsletters, vídeos, música, redes sociales, mapas, analítica, plataformas de compra o contenido embebido.",
+              "Cookies publicitarias o de marketing: solo se utilizarán si se activan campañas, píxeles publicitarios, remarketing o herramientas similares, y requerirán consentimiento previo del usuario cuando proceda.",
             ],
           },
         ],
       },
       {
-        title: "4. Base legal para el uso de cookies",
+        title: "3.3. Cookies de terceros y servicios externos",
         blocks: [
           {
-            kind: "list",
-            items: [
-              "Cookies técnicas o necesarias: interés legítimo del responsable (art. 6.1.f RGPD).",
-              "Cookies de análisis, personalización, publicitarias o de terceros: consentimiento del usuario (art. 6.1.a RGPD), prestado a través del banner o panel de configuración de cookies.",
-            ],
+            kind: "paragraph",
+            text: "La web puede integrar enlaces o elementos de terceros como Brevo, Instagram, SoundCloud, Spotify, Apple Music, DistroKid, YouTube, editoriales, librerías, marketplaces, plataformas de venta o herramientas de analítica. Dichos terceros pueden instalar cookies o tecnologías similares conforme a sus propias políticas cuando el usuario interactúe con sus servicios.",
           },
         ],
       },
       {
-        title: "5. Gestión y configuración de cookies",
+        title: "3.4. Base legal",
         blocks: [
           {
             kind: "paragraph",
-            text: "El usuario puede permitir, bloquear o eliminar las cookies instaladas en su dispositivo mediante:",
-          },
-          {
-            kind: "list",
-            items: [
-              "El panel o banner de configuración de cookies disponible en el sitio web.",
-              "La configuración de las opciones del navegador utilizado.",
-            ],
-          },
-          {
-            kind: "paragraph",
-            text: "La desactivación de determinadas cookies puede afectar al correcto funcionamiento del sitio web o a la disponibilidad de algunos servicios.",
-          },
-          {
-            kind: "paragraph",
-            text: "A continuación se facilitan enlaces informativos para la gestión de cookies en los principales navegadores:",
-          },
-          {
-            kind: "list",
-            items: [
-              "Google Chrome: https://support.google.com/chrome/answer/95647?hl=es",
-              "Mozilla Firefox: https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan",
-              "Microsoft Edge / Internet Explorer: https://support.microsoft.com/es-es/help/17442",
-              "Safari: https://support.apple.com/es-es/guide/safari/sfri11471/mac",
-              "Safari para iOS (iPhone y iPad): https://support.apple.com/es-es/HT201265",
-            ],
+            text: "Las cookies técnicas o necesarias se utilizan para permitir el funcionamiento del sitio. Las cookies de análisis, preferencias, publicidad o terceros que no sean estrictamente necesarias se utilizarán únicamente cuando el usuario haya prestado su consentimiento a través del banner o panel de configuración de cookies.",
           },
         ],
       },
       {
-        title: "6. Información adicional sobre cookies",
+        title: "3.5. Gestión de cookies",
         blocks: [
           {
             kind: "paragraph",
-            text: "Para obtener más información sobre las cookies, incluyendo cómo ver qué cookies se han instalado en su dispositivo y cómo gestionarlas o eliminarlas, puede consultar los siguientes sitios web:",
+            text: "El usuario puede aceptar, rechazar o configurar las cookies no necesarias desde el banner o panel de configuración disponible en la web. También puede bloquear o eliminar cookies desde la configuración de su navegador.",
           },
-          {
-            kind: "list",
-            items: ["allaboutcookies.org", "youronlinechoices.eu", "youronlinechoices.com"],
-          },
-        ],
-      },
-      {
-        title: "7. Actualización de la Política de Cookies",
-        blocks: [
           {
             kind: "paragraph",
-            text: "El titular del sitio web puede modificar la presente Política de Cookies en función de cambios legislativos, reglamentarios o técnicos. Se recomienda al usuario revisar esta política de forma periódica para estar adecuadamente informado sobre cómo y para qué se utilizan las cookies.",
+            text: "La desactivación de determinadas cookies puede afectar al funcionamiento de algunas funcionalidades, como formularios, vídeos, reproductores, estadísticas, integración con redes sociales o servicios externos.",
           },
         ],
       },
       {
-        title: "8. Contacto",
+        title: "3.6. Actualización de la política de cookies",
         blocks: [
           {
             kind: "paragraph",
-            text: "Si desea ponerse en contacto con nosotros en relación con esta Política de Cookies, puede hacerlo a través del correo electrónico protecciondedatos@institutosteopatia.com.",
+            text: "Esta política podrá modificarse cuando cambien los servicios utilizados por la web, las cookies instaladas, la configuración técnica del sitio o la normativa aplicable. Se recomienda revisarla periódicamente.",
           },
         ],
       },
     ],
   },
   {
-    eyebrow: "Condiciones",
-    title: "Política de devoluciones, reembolsos y cancelaciones",
-    intro:
-      "La presente política regula las condiciones aplicables a las devoluciones, reembolsos y cancelaciones de productos y formaciones ofrecidas por el Instituto Aragonés de Osteopatía (IAO).",
+    eyebrow: "Newsletter",
+    title: "Política de comunicaciones comerciales y newsletter",
     sections: [
       {
-        title: "1. Ámbito de aplicación y aspectos legales",
+        title: "4. Comunicaciones electrónicas",
         blocks: [
           {
             kind: "paragraph",
-            text: "El Instituto Aragonés de Osteopatía cumple con los requisitos legales establecidos para la impartición de formación especializada, siendo un centro reconocido a nivel nacional por la calidad de sus programas y la excelencia de su profesorado.",
+            text: "El usuario podrá recibir comunicaciones electrónicas relacionadas con Lágrimas Errantes únicamente cuando haya prestado su consentimiento, exista una relación previa que lo permita legalmente o concurra otra base legítima conforme a la normativa aplicable.",
           },
           {
             kind: "paragraph",
-            text: "El Instituto otorga diplomas y certificados que capacitan profesionalmente y permiten el ejercicio profesional tanto por cuenta propia como ajena, de acuerdo con la jurisprudencia del Tribunal Supremo, el Real Decreto Legislativo del Impuesto sobre Actividades Económicas (IAE), la Resolución del Parlamento Europeo de 20 de mayo de 1997 sobre el estatuto de la medicina no convencional, así como la normativa laboral vigente (Estatuto de los Trabajadores y Ley Orgánica de Libertad Sindical).",
+            text: "Estas comunicaciones podrán incluir noticias editoriales, novedades de libros, poemas, fragmentos, presentaciones, eventos, preventas, lanzamientos, canciones, álbumes, vídeos, contenido del universo literario, promociones o información cultural vinculada al proyecto.",
           },
           {
             kind: "paragraph",
-            text: "Los alumnos formados en el Instituto Aragonés de Osteopatía podrán beneficiarse de diplomas y certificados laborales, no académicos oficiales, que acreditan su competencia profesional y su capacitación para el ejercicio legal de la actividad.",
+            text: "El usuario podrá darse de baja en cualquier momento mediante el enlace incluido en cada comunicación o escribiendo al correo de contacto del titular. La retirada del consentimiento no afectará a la licitud de los tratamientos realizados con anterioridad.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    eyebrow: "Compras",
+    title: "Condiciones de compra, devoluciones, reembolsos y preventas",
+    sections: [
+      {
+        title: "5.1. Ámbito de aplicación",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: "Estas condiciones se aplican únicamente a las compras, reservas, preventas, productos físicos, ebooks, merchandising, música, descargas o servicios que, en su caso, sean ofrecidos y gestionados directamente por Javier Imaz Fandos o por Lágrimas Errantes a través de canales propios.",
+          },
+          {
+            kind: "paragraph",
+            text: "Cuando la compra se realice a través de editoriales, librerías, distribuidoras, plataformas musicales, marketplaces, pasarelas externas o cualquier tercero, se aplicarán exclusivamente las condiciones de compra, envío, pago, devolución y atención al cliente de dicha plataforma.",
           },
         ],
       },
       {
-        title: "2. Política de devoluciones de productos",
+        title: "5.2. Productos físicos",
         blocks: [
           {
             kind: "paragraph",
-            text: "El plazo para solicitar la devolución de productos físicos o retractación en caso de iniciar un curso es de 30 días naturales desde la recepción del producto o desde el comienzo del mismo.",
+            text: "En caso de venta directa de libros físicos, ejemplares firmados, merchandising u otros productos materiales, el usuario dispondrá de los derechos reconocidos por la normativa de consumidores y usuarios. Salvo excepciones legalmente previstas, podrá desistir de la compra dentro del plazo legal aplicable desde la recepción del producto.",
           },
           {
             kind: "paragraph",
-            text: "El producto, en caso de material de texto, deberá encontrarse sin usar, en perfecto estado y en su embalaje original.",
+            text: "Para aceptar una devolución, el producto deberá encontrarse en buen estado, sin uso indebido, sin daños imputables al comprador y, cuando proceda, con su embalaje original o protección adecuada.",
           },
           {
             kind: "paragraph",
-            text: "No se admiten devoluciones de productos digitales o descargables, tarjetas de regalo, productos de higiene personal o material sanitario de uso individual, en caso de que hubiere.",
+            text: "Los gastos de devolución podrán correr a cargo del comprador salvo que la devolución se deba a un error del titular, defecto del producto o causa legalmente imputable al vendedor.",
           },
         ],
       },
       {
-        title: "3. Reembolsos",
+        title: "5.3. Productos personalizados o firmados",
         blocks: [
           {
             kind: "paragraph",
-            text: "Una vez recibido el producto devuelto y tras comprobar su estado, se notificará al cliente la aprobación o denegación del reembolso.",
-          },
-          {
-            kind: "paragraph",
-            text: "En caso de aprobación, el reembolso se efectuará utilizando el mismo medio de pago empleado en la compra, dentro del plazo legalmente establecido.",
+            text: "Los productos personalizados a petición del usuario, ejemplares dedicados nominalmente, productos hechos bajo encargo o materiales claramente personalizados podrán quedar excluidos del derecho de desistimiento cuando así lo permita la normativa aplicable, salvo defecto, error o falta de conformidad.",
           },
         ],
       },
       {
-        title: "4. Gastos de envío",
+        title: "5.4. Ebooks, descargas digitales y música",
         blocks: [
           {
             kind: "paragraph",
-            text: "Los gastos de envío derivados de la devolución correrán a cargo del cliente, salvo que la devolución se deba a un error imputable al Instituto Aragonés de Osteopatía o a un defecto del producto.",
+            text: "En caso de venta directa de ebooks, archivos digitales, música descargable, contenido audiovisual u otros productos digitales, el derecho de desistimiento podrá no ser aplicable una vez iniciado el suministro o descarga del contenido digital, siempre que el usuario haya aceptado expresamente esta condición cuando la normativa lo exija.",
+          },
+          {
+            kind: "paragraph",
+            text: "Si el ebook, música o contenido digital se adquiere mediante plataformas externas, se aplicarán las condiciones de devolución, cancelación y soporte de cada plataforma.",
           },
         ],
       },
       {
-        title: "5. Política de cancelación de cursos y formaciones",
+        title: "5.5. Preventas",
         blocks: [
           {
             kind: "paragraph",
-            text: "En caso de cancelación de la inscripción a un curso o formación:",
-          },
-          {
-            kind: "list",
-            items: [
-              "El importe abonado no será reembolsable una vez formalizada la inscripción y comenzada la formación.",
-              "El importe abonado podrá ser utilizado como crédito para la realización de otros cursos o actividades formativas del Instituto, en el curso académico siguiente.",
-            ],
-          },
-          {
-            kind: "paragraph",
-            text: "Únicamente en casos debidamente justificados y por causas de fuerza mayor, a valorar por la dirección del centro, el Instituto podrá acceder a la devolución de una parte proporcional del importe pendiente. Se aplicará una deducción del 10 % sobre el precio total del curso en concepto de gastos de gestión.",
+            text: "Las preventas se regirán por las condiciones específicas indicadas en cada campaña: producto, precio, fecha estimada de entrega, gastos de envío, plataforma utilizada, posibilidad de cancelación y condiciones especiales. Si la preventa se gestiona a través de terceros, se aplicarán las condiciones de esa plataforma.",
           },
         ],
       },
       {
-        title: "6. Contacto",
+        title: "5.6. Reembolsos",
         blocks: [
           {
             kind: "paragraph",
-            text: "Para cualquier consulta relacionada con devoluciones, reembolsos o cancelaciones, puede ponerse en contacto con el Instituto Aragonés de Osteopatía a través del siguiente correo electrónico: osteopatia@institutosteopatia.com.",
+            text: "Cuando proceda un reembolso en una venta directa, se realizará mediante el mismo medio de pago utilizado por el usuario, salvo acuerdo distinto o imposibilidad técnica. El plazo de devolución será el legalmente aplicable desde la aprobación de la devolución o cancelación.",
+          },
+        ],
+      },
+      {
+        title: "5.7. Contacto para compras directas",
+        blocks: [
+          {
+            kind: "paragraph",
+            text: `Para incidencias relacionadas con compras directas, devoluciones, productos defectuosos, pedidos, entregas o preventas gestionadas por Lágrimas Errantes, el usuario podrá escribir a ${contactEmail}.`,
           },
         ],
       },
@@ -511,7 +543,7 @@ export default function PrivacyPage() {
           <SectionHeading
             eyebrow="Información legal"
             title="Privacidad y condiciones"
-            description="Información sobre protección de datos, comunicaciones comerciales, uso de cookies y condiciones de devolución, reembolso y cancelación."
+            description="Aviso legal, protección de datos, cookies, newsletter y condiciones aplicables a Lágrimas Errantes."
           />
         </Reveal>
 
@@ -525,9 +557,11 @@ export default function PrivacyPage() {
                 <h2 className="mt-6 font-display text-4xl leading-tight text-ivory sm:text-5xl">
                   {group.title}
                 </h2>
-                <p className="mt-6 max-w-4xl text-base leading-8 text-parchment">
-                  {group.intro}
-                </p>
+                {group.intro ? (
+                  <p className="mt-6 max-w-4xl text-base leading-8 text-parchment">
+                    {group.intro}
+                  </p>
+                ) : null}
 
                 <div className="mt-10 space-y-9">
                   {group.sections.map((section) => (
