@@ -19,42 +19,47 @@ const bookPurchaseUrl =
 const musicPlaylistUrl =
   "https://www.youtube.com/playlist?list=OLAK5uy_m1VT6AzrYnSMEUIuoevasO8af_1WBQSLY";
 
+const musicYoutubeVideoUrl =
+  "https://www.youtube.com/watch?v=k9NAClO0n3M&list=OLAK5uy_m1VT6AzrYnSMEUIuoevasO8af_1WBQSLY";
+
+const soundCloudUrl = "https://soundcloud.com/artists";
+
+const spotifyAlbumUrl =
+  "https://open.spotify.com/intl-es/album/2q3PEAfb8TUSEetan94nkV";
+
+const amazonAlbumUrl =
+  "https://www.amazon.es/dp/B0H7PRJYCB/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=72DL2IT2U0UB&dib=eyJ2IjoiMSJ9.2_5t90BmnONOMpjkbBbS-wOWcfMd-58f_1ZeyabqGjgfPoIh_YxnaqLBK1r3ECcW7jWdeHufbBPxEkZkn_Iy4uIJu0_r6wesFUG-dCTD9X7KXZFbDKjtGPHogPMVQIH_52hsAOZt13yTOfS45f2Yv1SR2cXKhRM9QUkZVnHkPHaAaaCd1QHF9SEfpb9_xusR.7AnLiOFXZk2SeIAX_vskqtKbGPjyXYkjSFE8HoTRp5c&dib_tag=se&keywords=zami+reivaj&qid=1783418481&s=mobile-apps&sprefix=zami+reivaj%2Cmobile-apps%2C87&sr=1-1";
+
 const platformLinks = [
   {
-    label: "Enlace oficial DistroKid / HyperFollow",
-    href: "#distrokid-hyperfollow-pendiente",
-    status: "Página oficial pendiente",
-    text: "Página puente para reunir los enlaces que DistroKid genere cuando el álbum esté disponible en las plataformas.",
-  },
-  {
-    label: "Comprar o escuchar en Apple",
-    href: "#apple-pendiente",
-    status: "Apple Music / iTunes pendiente",
-    text: "Preparado para enlazar la ficha oficial cuando el álbum esté disponible en el ecosistema de Apple.",
+    label: "Escuchar en Spotify",
+    href: spotifyAlbumUrl,
+    status: "Streaming",
+    text: "Escucha el álbum completo en Spotify y guarda el proyecto para volver a sus canciones desde tu biblioteca.",
   },
   {
     label: "Comprar o escuchar en Amazon",
-    href: "#amazon-pendiente",
-    status: "Amazon Music pendiente",
-    text: "Preparado para la ficha del álbum en Amazon, útil como canal comercial y de escucha según disponibilidad.",
-  },
-  {
-    label: "Escuchar en Spotify",
-    href: "#spotify-pendiente",
-    status: "Streaming pendiente",
-    text: "Canal principal de descubrimiento y escucha, más orientado a streaming que a venta directa del álbum.",
+    href: amazonAlbumUrl,
+    status: "Compra y escucha",
+    text: "Accede a la ficha del álbum en Amazon para comprarlo o escucharlo desde las opciones disponibles en la plataforma.",
   },
   {
     label: "Escuchar en YouTube",
     href: musicPlaylistUrl,
     status: "Playlist oficial",
-    text: "Acceso al álbum de Donde aún respira tu nombre en YouTube Music.",
+    text: "Reproduce el álbum como lista completa en YouTube y compártelo fácilmente con otros lectores y oyentes.",
+  },
+  {
+    label: "Ver el lanzamiento en YouTube",
+    href: musicYoutubeVideoUrl,
+    status: "Vídeo y álbum",
+    text: "Abre el primer vídeo del álbum y continúa la escucha desde la lista oficial del lanzamiento.",
   },
   {
     label: "Escuchar en SoundCloud",
-    href: "#soundcloud-pendiente",
-    status: "QR y escucha pendiente",
-    text: "Ideal para enlazar los QR del libro. Se podrán escuchar pistas públicas o privadas compartidas mediante enlace secreto.",
+    href: soundCloudUrl,
+    status: "Escucha",
+    text: "Accede al espacio de SoundCloud vinculado al universo musical de Zami Reivaj y sus piezas sonoras.",
   },
   {
     label: "Comprar el libro",
@@ -69,7 +74,7 @@ const albumPlan = [
     number: "01",
     title: "Primer álbum",
     status: "Terminado · 11 canciones",
-    text: "Las primeras once piezas del ciclo musical de Donde aún respira tu nombre. El álbum ya está preparado para su distribución a través de DistroKid.",
+    text: "Las primeras once piezas del ciclo musical de Donde aún respira tu nombre. El álbum ya puede escucharse y comprarse desde sus plataformas disponibles.",
   },
   {
     number: "02",
@@ -285,8 +290,8 @@ export default function ZamiReivajPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Compra, escucha y libro"
-              title="DistroKid como centro de distribución"
-              description="El álbum ya está preparado en DistroKid, que lo distribuye hacia las plataformas principales. Aquí quedarán enlazadas la página oficial del lanzamiento, las tiendas, los espacios de streaming y el acceso al libro."
+              title="Escucha el álbum y entra en el libro"
+              description="El universo de Zami Reivaj ya puede recorrerse desde la música y desde la página. Escucha el álbum en las plataformas disponibles, compártelo con quien pueda sentirlo y completa la experiencia con el libro que le da origen."
               centered
             />
           </Reveal>
