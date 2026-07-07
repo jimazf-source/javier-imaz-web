@@ -46,6 +46,12 @@ const galeria = [
   { src: "/assets/donde-aun-respira-gallery/lamina-11.jpg", alt: "Lámina interior 11 de Donde aún respira tu nombre", title: "Lámina 11" },
 ];
 
+const bookPurchaseUrl =
+  "https://grupoeditorialsargantana.com/libro/donde-aun-respira-tu-nombre_196926/";
+
+const musicPlaylistUrl =
+  "https://www.youtube.com/playlist?list=OLAK5uy_m1VT6AzrYnSMEUIuoevasO8af_1WBQSLY";
+
 export default function DondeAunRespiraPage() {
   return (
     <>
@@ -56,9 +62,9 @@ export default function DondeAunRespiraPage() {
         image="/assets/portada-donde-aun-respira-frontal.jpg"
       >
         <div className="mt-10 flex flex-wrap gap-4">
-          <ButtonLink href="#">Comprar libro</ButtonLink>
-          <ButtonLink href="/zami-reivaj" variant="outline">
-            Proyecto musical
+          <ButtonLink href={bookPurchaseUrl}>Comprar libro</ButtonLink>
+          <ButtonLink href={musicPlaylistUrl} variant="outline">
+            Escuchar música
           </ButtonLink>
           <ButtonLink href="/muestra-donde-aun-respira" variant="outline">
             Leer muestra
@@ -141,8 +147,8 @@ export default function DondeAunRespiraPage() {
               <p className="text-[.68rem] font-bold uppercase tracking-[.32em] text-gold-light">Autoría total</p>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-9 text-parchment">Las tres dimensiones de la obra —escritura, pintura y composición— son obra del propio Javier Imaz Fandos. Palabra, imagen y sonido nacen de una sola voz y convergen en un único universo poético.</p>
               <div className="mt-8">
-                <ButtonLink href="/zami-reivaj">
-                  Entrar en el proyecto musical
+                <ButtonLink href={musicPlaylistUrl}>
+                  Escuchar el álbum en YouTube
                 </ButtonLink>
               </div>
             </div>
@@ -221,7 +227,7 @@ export default function DondeAunRespiraPage() {
             &ldquo;Hay amores que, aunque imposibles, se quedan para siempre donde importa: en la voz que se atreve a convertirlos en literatura.&rdquo;
           </blockquote>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <ButtonLink href="#">Comprar Donde aún respira tu nombre</ButtonLink>
+            <ButtonLink href={bookPurchaseUrl}>Comprar Donde aún respira tu nombre</ButtonLink>
             <ButtonLink href="/muestra-donde-aun-respira" variant="outline">
               Leer muestra</ButtonLink>
           </div>

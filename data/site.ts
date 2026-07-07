@@ -134,7 +134,7 @@ export const books: Book[] = [
     imageLabel: "Portada aportada",
     href: "/donde-aun-respira-tu-nombre",
     sampleUrl: "/downloads/donde-aun-respira-tu-nombre-muestra.pdf",
-    purchaseUrl: "#",
+    purchaseUrl: "https://grupoeditorialsargantana.com/libro/donde-aun-respira-tu-nombre_196926/",
     shortDescription:
       "Una cartografía emocional en 53 poemas comentados: el amor que no se olvida, sino que se transforma en lenguaje.",
     published: "2026",

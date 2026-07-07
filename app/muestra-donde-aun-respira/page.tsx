@@ -11,6 +11,8 @@ export const metadata = createMetadata({
 });
 
 const sampleUrl = "/downloads/donde-aun-respira-tu-nombre-muestra.pdf";
+const bookPurchaseUrl =
+  "https://grupoeditorialsargantana.com/libro/donde-aun-respira-tu-nombre_196926/";
 
 export default function MuestraDondeAunRespiraPage() {
   return (
@@ -36,7 +38,7 @@ export default function MuestraDondeAunRespiraPage() {
             <ButtonLink href={sampleUrl} variant="outline" download>
               Descargar PDF
             </ButtonLink>
-            <ButtonLink href="#">Comprar libro</ButtonLink>
+            <ButtonLink href={bookPurchaseUrl}>Comprar libro</ButtonLink>
           </div>
         </div>
       </Reveal>

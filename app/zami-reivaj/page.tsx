@@ -13,6 +13,12 @@ export const metadata = createMetadata({
   image: "/assets/portada-donde-aun-respira-frontal.jpg",
 });
 
+const bookPurchaseUrl =
+  "https://grupoeditorialsargantana.com/libro/donde-aun-respira-tu-nombre_196926/";
+
+const musicPlaylistUrl =
+  "https://www.youtube.com/playlist?list=OLAK5uy_m1VT6AzrYnSMEUIuoevasO8af_1WBQSLY";
+
 const platformLinks = [
   {
     label: "Enlace oficial DistroKid / HyperFollow",
@@ -40,9 +46,9 @@ const platformLinks = [
   },
   {
     label: "Escuchar en YouTube",
-    href: "#youtube-pendiente",
-    status: "Vídeo / streaming pendiente",
-    text: "Espacio para videoclips, lyric videos o YouTube Music. Ayuda mucho a descubrir el proyecto.",
+    href: musicPlaylistUrl,
+    status: "Playlist oficial",
+    text: "Acceso al álbum de Donde aún respira tu nombre en YouTube Music.",
   },
   {
     label: "Escuchar en SoundCloud",
@@ -52,9 +58,9 @@ const platformLinks = [
   },
   {
     label: "Comprar el libro",
-    href: "/donde-aun-respira-tu-nombre",
-    status: "Página del poemario",
-    text: "Acceso al libro que origina el proyecto musical, visual y poético.",
+    href: bookPurchaseUrl,
+    status: "Editorial Sargantana",
+    text: "Compra del poemario en la ficha oficial de Grupo Editorial Sargantana.",
   },
 ];
 
