@@ -30,6 +30,30 @@ const spotifyAlbumUrl =
 const amazonAlbumUrl =
   "https://www.amazon.es/dp/B0H7PRJYCB/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=72DL2IT2U0UB&dib=eyJ2IjoiMSJ9.2_5t90BmnONOMpjkbBbS-wOWcfMd-58f_1ZeyabqGjgfPoIh_YxnaqLBK1r3ECcW7jWdeHufbBPxEkZkn_Iy4uIJu0_r6wesFUG-dCTD9X7KXZFbDKjtGPHogPMVQIH_52hsAOZt13yTOfS45f2Yv1SR2cXKhRM9QUkZVnHkPHaAaaCd1QHF9SEfpb9_xusR.7AnLiOFXZk2SeIAX_vskqtKbGPjyXYkjSFE8HoTRp5c&dib_tag=se&keywords=zami+reivaj&qid=1783418481&s=mobile-apps&sprefix=zami+reivaj%2Cmobile-apps%2C87&sr=1-1";
 
+type AlbumLink = {
+  label: string;
+  href: string;
+};
+
+type DiscographyCard = {
+  number?: string;
+  title: string;
+  subtitle: string;
+  tracks?: string;
+  status: string;
+  cover?: string;
+  alt?: string;
+  text: string;
+  links: AlbumLink[];
+};
+
+type DiscographySection = {
+  title: string;
+  intro: string;
+  albums: DiscographyCard[];
+  extraCards?: DiscographyCard[];
+};
+
 const pendingMusicLinks = [
   { label: "Spotify", href: "" },
   { label: "Amazon", href: "" },
@@ -47,7 +71,7 @@ const dondeAunRespiraLinks = [
   { label: "Comprar libro", href: bookPurchaseUrl },
 ];
 
-const discographySections = [
+const discographySections: DiscographySection[] = [
   {
     title: "Música en español",
     intro: "El ciclo en castellano nace directamente del poemario Donde aún respira tu nombre y crecerá con nuevos álbumes vinculados a sus poemas, imágenes y estaciones emocionales.",
@@ -58,8 +82,8 @@ const discographySections = [
         subtitle: "El instante donde nace el nosotros",
         tracks: "11 canciones · El nacimiento del amor y la intensidad",
         status: "Publicado · Ya a la venta",
-        cover: "/assets/portada-donde-aun-respira-frontal.jpg",
-        alt: "Portada del álbum Donde aún respira tu nombre de Zami Reivaj",
+        cover: "/assets/zami-albums/es-el-instante-donde-nace-el-nosotros.png",
+        alt: "Portada del álbum El instante donde nace el nosotros de Zami Reivaj",
         text: "El álbum conectado al poemario: música, imagen y palabra unidos para prolongar la lectura del libro.",
         links: dondeAunRespiraLinks,
       },
@@ -69,6 +93,8 @@ const discographySections = [
         subtitle: "La ruptura y la caída",
         tracks: "10 canciones previstas",
         status: "Boceto de álbum",
+        cover: "/assets/zami-albums/es-cuando-el-amor-se-derrumba.png",
+        alt: "Portada del álbum Cuando el amor se derrumba de Zami Reivaj",
         text: "Un tramo más oscuro del ciclo: la pérdida, la distancia y el primer silencio después de la intensidad.",
         links: pendingMusicLinks,
       },
@@ -78,6 +104,8 @@ const discographySections = [
         subtitle: "El duelo y la memoria",
         tracks: "15 canciones previstas",
         status: "Boceto de álbum",
+        cover: "/assets/zami-albums/es-el-eco-que-permanece.png",
+        alt: "Portada del álbum El eco que permanece de Zami Reivaj",
         text: "Canciones pensadas para habitar la memoria: lo que queda cuando el amor ya no está, pero sigue sonando.",
         links: pendingMusicLinks,
       },
@@ -87,6 +115,8 @@ const discographySections = [
         subtitle: "La permanencia y la trascendencia",
         tracks: "16 canciones previstas",
         status: "Boceto de álbum",
+        cover: "/assets/zami-albums/es-cuando-el-amor-se-convierte-en-palabras.png",
+        alt: "Portada del álbum Cuando el amor se convierte en palabras de Zami Reivaj",
         text: "Cierre del ciclo en español: la palabra como refugio, testimonio y forma de permanencia.",
         links: pendingMusicLinks,
       },
@@ -135,6 +165,8 @@ const discographySections = [
         subtitle: "Permanence and transcendence",
         tracks: "11 canciones previstas",
         status: "Boceto de álbum",
+        cover: "/assets/zami-albums/en-when-love-becomes-words.png",
+        alt: "Portada del álbum When Love Becomes Words de Zami Reivaj",
         text: "Espacio reservado para el cuarto álbum en inglés, pensado como cierre verbal y emocional del recorrido.",
         links: pendingMusicLinks,
       },
@@ -360,7 +392,7 @@ export default function ZamiReivajPage() {
                             <>
                               <Image
                                 src={album.cover}
-                                alt={album.alt}
+                                alt={album.alt ?? `Portada de ${album.title}`}
                                 fill
                                 sizes="(min-width: 1280px) 280px, (min-width: 768px) 50vw, 100vw"
                                 className="object-cover"
