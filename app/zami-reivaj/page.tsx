@@ -22,7 +22,7 @@ const musicPlaylistUrl =
 const musicYoutubeVideoUrl =
   "https://www.youtube.com/watch?v=k9NAClO0n3M&list=OLAK5uy_m1VT6AzrYnSMEUIuoevasO8af_1WBQSLY";
 
-const soundCloudUrl = "https://soundcloud.com/artists";
+const soundCloudUrl = "";
 
 const spotifyAlbumUrl =
   "https://open.spotify.com/intl-es/album/2q3PEAfb8TUSEetan94nkV";
@@ -30,69 +30,83 @@ const spotifyAlbumUrl =
 const amazonAlbumUrl =
   "https://www.amazon.es/dp/B0H7PRJYCB/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=72DL2IT2U0UB&dib=eyJ2IjoiMSJ9.2_5t90BmnONOMpjkbBbS-wOWcfMd-58f_1ZeyabqGjgfPoIh_YxnaqLBK1r3ECcW7jWdeHufbBPxEkZkn_Iy4uIJu0_r6wesFUG-dCTD9X7KXZFbDKjtGPHogPMVQIH_52hsAOZt13yTOfS45f2Yv1SR2cXKhRM9QUkZVnHkPHaAaaCd1QHF9SEfpb9_xusR.7AnLiOFXZk2SeIAX_vskqtKbGPjyXYkjSFE8HoTRp5c&dib_tag=se&keywords=zami+reivaj&qid=1783418481&s=mobile-apps&sprefix=zami+reivaj%2Cmobile-apps%2C87&sr=1-1";
 
-const platformLinks = [
-  {
-    label: "Escuchar en Spotify",
-    href: spotifyAlbumUrl,
-    status: "Streaming",
-    text: "Escucha el álbum completo en Spotify y guarda el proyecto para volver a sus canciones desde tu biblioteca.",
-  },
-  {
-    label: "Comprar o escuchar en Amazon",
-    href: amazonAlbumUrl,
-    status: "Compra y escucha",
-    text: "Accede a la ficha del álbum en Amazon para comprarlo o escucharlo desde las opciones disponibles en la plataforma.",
-  },
-  {
-    label: "Escuchar en YouTube",
-    href: musicPlaylistUrl,
-    status: "Playlist oficial",
-    text: "Reproduce el álbum como lista completa en YouTube y compártelo fácilmente con otros lectores y oyentes.",
-  },
-  {
-    label: "Ver el lanzamiento en YouTube",
-    href: musicYoutubeVideoUrl,
-    status: "Vídeo y álbum",
-    text: "Abre el primer vídeo del álbum y continúa la escucha desde la lista oficial del lanzamiento.",
-  },
-  {
-    label: "Escuchar en SoundCloud",
-    href: soundCloudUrl,
-    status: "Escucha",
-    text: "Accede al espacio de SoundCloud vinculado al universo musical de Zami Reivaj y sus piezas sonoras.",
-  },
-  {
-    label: "Comprar el libro",
-    href: bookPurchaseUrl,
-    status: "Editorial Sargantana",
-    text: "Compra del poemario en la ficha oficial de Grupo Editorial Sargantana.",
-  },
-];
-
-const albumPlan = [
+const albumDiscography = [
   {
     number: "01",
-    title: "Primer álbum",
-    status: "Terminado · 11 canciones",
-    text: "Las primeras once piezas del ciclo musical de Donde aún respira tu nombre. El álbum ya puede escucharse y comprarse desde sus plataformas disponibles.",
+    title: "When love falls",
+    tracks: "15 canciones",
+    status: "Publicado en plataformas",
+    cover: "/assets/zami-albums/when-love-falls.png",
+    alt: "Portada del álbum When love falls de Zami Reivaj",
+    text: "Una primera caída emocional entre amor, pérdida y memoria: piano, soul y atmósfera cinematográfica.",
+    links: [
+      { label: "Spotify", href: "" },
+      { label: "Amazon", href: "" },
+      { label: "YouTube", href: "" },
+      { label: "SoundCloud", href: "" },
+    ],
   },
   {
     number: "02",
-    title: "Segundo álbum",
-    status: "En preparación · 12-14 canciones previstas",
-    text: "Continuará el recorrido emocional del poemario, ampliando el diálogo entre voz, imagen y memoria.",
+    title: "The echo that remains",
+    tracks: "10 canciones",
+    status: "Publicado en plataformas",
+    cover: "/assets/zami-albums/the-echo-that-remains.png",
+    alt: "Portada del álbum The echo that remains de Zami Reivaj",
+    text: "Un territorio de ecos, voz rota y elegancia nocturna, con un pulso cercano al soulwave cinematográfico.",
+    links: [
+      { label: "Spotify", href: "" },
+      { label: "Amazon", href: "" },
+      { label: "YouTube", href: "" },
+      { label: "SoundCloud", href: "" },
+    ],
   },
   {
     number: "03",
-    title: "Tercer álbum",
-    status: "En preparación · 12-14 canciones previstas",
-    text: "Un tramo más íntimo y cinematográfico del universo sonoro, pensado para acompañar nuevas estaciones del libro.",
+    title: "I Love you perhaps.",
+    tracks: "11 canciones",
+    status: "Publicado en plataformas",
+    cover: "/assets/zami-albums/i-love-you-perhaps.jpg",
+    alt: "Portada del álbum I Love you perhaps de Zami Reivaj",
+    text: "Canciones de deseo, duda y permanencia: una zona más íntima del universo romántico de Zami Reivaj.",
+    links: [
+      { label: "Spotify", href: "" },
+      { label: "Amazon", href: "" },
+      { label: "YouTube", href: "" },
+      { label: "SoundCloud", href: "" },
+    ],
   },
   {
     number: "04",
-    title: "Cuarto álbum",
-    status: "En preparación · 12-14 canciones previstas",
-    text: "Cierre musical del proyecto: la última constelación de canciones vinculadas a los poemas y sus imágenes.",
+    title: "The moment we become us",
+    tracks: "11 canciones",
+    status: "Publicado en plataformas",
+    cover: "/assets/zami-albums/the-moment-we-become-us.png",
+    alt: "Portada del álbum The moment we become us de Zami Reivaj",
+    text: "Un álbum luminoso y melancólico sobre el instante en que dos memorias comienzan a formar una sola historia.",
+    links: [
+      { label: "Spotify", href: "" },
+      { label: "Amazon", href: "" },
+      { label: "YouTube", href: "" },
+      { label: "SoundCloud", href: "" },
+    ],
+  },
+  {
+    number: "05",
+    title: "Donde aún respira tu nombre",
+    tracks: "11 canciones",
+    status: "Publicado · Libro origen",
+    cover: "/assets/portada-donde-aun-respira-frontal.jpg",
+    alt: "Portada del álbum Donde aún respira tu nombre de Zami Reivaj",
+    text: "El álbum conectado al poemario: música, imagen y palabra unidos para prolongar la lectura del libro.",
+    links: [
+      { label: "Spotify", href: spotifyAlbumUrl },
+      { label: "Amazon", href: amazonAlbumUrl },
+      { label: "YouTube", href: musicPlaylistUrl },
+      { label: "Vídeo YouTube", href: musicYoutubeVideoUrl },
+      { label: "SoundCloud", href: soundCloudUrl },
+      { label: "Comprar libro", href: bookPurchaseUrl },
+    ],
   },
 ];
 
@@ -100,7 +114,7 @@ const universeStats = [
   { value: "52", label: "poemas" },
   { value: "52", label: "imágenes" },
   { value: "52", label: "canciones" },
-  { value: "4", label: "álbumes previstos" },
+  { value: "5", label: "álbumes publicados" },
 ];
 
 export default function ZamiReivajPage() {
@@ -256,66 +270,55 @@ export default function ZamiReivajPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Mapa discográfico"
-              title="Cuatro álbumes para completar el ciclo"
-              description="La sección queda pensada para crecer con el proyecto: el primer álbum ya existe y los tres siguientes ocuparán su lugar conforme se terminen las nuevas canciones."
+              title="Cinco álbumes abiertos al universo Zami Reivaj"
+              description="Cada álbum funciona como una puerta propia: portada, atmósfera, número de canciones y accesos de escucha o compra. La discografía queda preparada para seguir creciendo cuando lleguen nuevos lanzamientos."
               centered
             />
           </Reveal>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-4">
-            {albumPlan.map((album, index) => (
+          <div className="mt-14 grid gap-7 lg:grid-cols-2">
+            {albumDiscography.map((album, index) => (
               <Reveal key={album.number} delay={index * 80}>
-                <article className="flex h-full flex-col border border-gold/20 bg-panel p-7">
-                  <p className="text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
-                    Álbum {album.number}
-                  </p>
-                  <h3 className="mt-5 font-display text-3xl leading-tight text-ivory">
-                    {album.title}
-                  </h3>
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-[.18em] text-parchment">
-                    {album.status}
-                  </p>
-                  <p className="mt-5 flex-1 text-sm leading-7 text-muted">
-                    {album.text}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Compra, escucha y libro"
-              title="Escucha el álbum y entra en el libro"
-              description="El universo de Zami Reivaj ya puede recorrerse desde la música y desde la página. Escucha el álbum en las plataformas disponibles, compártelo con quien pueda sentirlo y completa la experiencia con el libro que le da origen."
-              centered
-            />
-          </Reveal>
-
-          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {platformLinks.map((platform, index) => (
-              <Reveal key={platform.label} delay={index * 70}>
-                <article
-                  id={platform.href.startsWith("#") ? platform.href.slice(1) : undefined}
-                  className="flex h-full flex-col border border-gold/20 bg-panel/55 p-7"
-                >
-                  <p className="text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
-                    {platform.status}
-                  </p>
-                  <h3 className="mt-5 flex-1 font-display text-3xl leading-tight text-ivory">
-                    {platform.label}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    {platform.text}
-                  </p>
-                  <div className="mt-7">
-                    <ButtonLink href={platform.href} variant={platform.href.startsWith("#") ? "quiet" : "gold"}>
-                      {platform.href.startsWith("#") ? "Pendiente" : "Abrir"}
-                    </ButtonLink>
+                <article className="grid h-full overflow-hidden border border-gold/20 bg-panel/75 shadow-2xl shadow-black/15 md:grid-cols-[220px_1fr]">
+                  <div className="relative aspect-square bg-ink md:h-full md:min-h-[220px]">
+                    <Image
+                      src={album.cover}
+                      alt={album.alt}
+                      fill
+                      sizes="(min-width: 1024px) 220px, 100vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+                  </div>
+                  <div className="flex flex-col p-7">
+                    <p className="text-[.65rem] font-bold uppercase tracking-[.28em] text-gold-light">
+                      Álbum {album.number}
+                    </p>
+                    <h3 className="mt-4 font-display text-3xl leading-tight text-ivory sm:text-4xl">
+                      {album.title}
+                    </h3>
+                    <p className="mt-3 text-xs font-semibold uppercase tracking-[.18em] text-parchment">
+                      {album.status} · {album.tracks}
+                    </p>
+                    <p className="mt-5 flex-1 text-sm leading-7 text-muted">
+                      {album.text}
+                    </p>
+                    <div className="mt-7 flex flex-wrap gap-3">
+                      {album.links.map((link) =>
+                        link.href ? (
+                          <ButtonLink key={link.label} href={link.href} className="min-h-11 px-5 py-2 text-xs">
+                            {link.label}
+                          </ButtonLink>
+                        ) : (
+                          <span
+                            key={link.label}
+                            className="inline-flex min-h-11 items-center justify-center rounded-full border border-parchment/15 px-5 py-2 text-xs font-semibold tracking-wide text-muted/70"
+                          >
+                            {link.label} pendiente
+                          </span>
+                        ),
+                      )}
+                    </div>
                   </div>
                 </article>
               </Reveal>
